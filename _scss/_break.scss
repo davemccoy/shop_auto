@@ -1,0 +1,29 @@
+@mixin break($point) {
+  @if $point == 1400 {
+    @media (max-width: 1400px) { @content ; }
+  }
+  @if $point == desktop {
+    @media (max-width: 1200px) { @content ; }
+  }
+  @if $point == medium {
+    @media (max-width: 992px) { @content ; }
+  }
+  @else if $point == 800 {
+    @media (max-width: 800px) { @content ; }
+  }
+  @else if $point == small {
+    @media (max-width: 768px) { @content ; }
+  }
+  @else if $point == 650 {
+    @media (max-width: 650px) { @content ; }
+  }
+  @else if $point == x-small {
+    @media (max-width: 478px)  { @content ; }
+  }
+  @else if $point == s-small {
+    @media (max-width: 375px)  { @content ; }
+  }
+  @else if $point == 330 {
+    @media (max-width: 330px)  { @content ; }
+  }
+}
