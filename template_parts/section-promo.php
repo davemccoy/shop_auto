@@ -34,58 +34,30 @@
 						в пару кликов 
 					</div>
 					<div class="inputs_wrapper">
-						<select class="input" name="" id="">
-							<option value="">Марка авто</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
+						<select class="input" name="year" id="">
+							<option value="0" style="color:#CCC;">Год выпуска</option>
+							<script>
+								var year = new Date().getFullYear();
+								for (var i = year; i>=1910;i--) {
+									document.write('<option value="'+i+'">'+i+'</option>');
+								}
+							</script>
 						</select>
-						<select class="input" name="" id="">
+						<select class="input" name="brand" id="rst-oldcars-form-make">
+							<?php
+							$wpdb_sale = new wpdb( "shopavto_db", "BsDsJFhE", "shopavto_db", "shopavto.mysql.tools" );
+							$q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = 0) WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
+							echo '<option selected="selected" value="0">Марка авто</option>';
+							foreach($q as $row) {
+								echo '<option value="'.$row->term_id.'">'.$row->name.'</option>';
+							}?>
+
+						</select>
+						<select class="input" name="model" id="rst-oldcars-form-model" disabled="true">
 							<option value="">Модель авто</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
 						</select>
-						<select class="input" name="" id="">
-							<option value="">Год выпуска</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-							<option value="">12312</option>
-						</select>
-						<input class="input" type="tel" placeholder="Номер телефона">
+
+						<input class="input" type="tel" name="tel" placeholder="Номер телефона">
 					</div>
 					<div class="send_btn">
 						<button class="btn">Узнать</button>

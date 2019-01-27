@@ -11,7 +11,6 @@ register_nav_menus(array(
 	'top' => 'Верхнее',
 	'bottom' => 'Внизу'
 ));
-
 add_theme_support('post-thumbnails');
 
 
@@ -76,3 +75,19 @@ if (!function_exists('add_styles')) {
 add_filter( 'auto_update_theme', '__return_false' );
 add_filter( 'auto_update_plugin', '__return_false' );
 
+add_action( 'wp_ajax_get_carproducers', 'get_carproducers_callback' );
+add_action( 'wp_ajax_nopriv_get_carproducers', 'get_carproducers_callback' );
+
+function get_carproducers_callback(){
+	$carproducer_id = isset($_POST['carproducer_id'])? (int)$_POST['carproducer_id']: 0;
+	if ( $carproducer_id == 0) {
+		return;
+	}
+	$wpdb_sale = new wpdb( "shopavto_db", "BsDsJFhE", "shopavto_db", "shopavto.mysql.tools" );
+	$q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = ".$carproducer_id.") WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
+	echo '<option selected="selected" value="0">Модель авто</option>';
+	foreach($q as $row) {
+		echo '<option value="'.$row->term_id.'">'.$row->name.'</option>';
+	}
+	exit();
+}

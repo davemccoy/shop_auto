@@ -116,4 +116,52 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('#rst-oldcars-form-make').on('change',function(e){
+
+        var carproducer_id = jQuery(this).find('option:selected').val();
+        $.post(
+            '/wp-admin/admin-ajax.php', {
+                action: 'get_carproducers',
+                carproducer_id: carproducer_id,
+            }).success(function(response) {
+            	console.log(response);
+                jQuery("#rst-oldcars-form-model").prop('disabled', false);
+                jQuery("#rst-oldcars-form-model").children('option').remove();
+                jQuery("#rst-oldcars-form-model").append(response).niceSelect('update');
+        });
+
+    });
+
+    $('#rst-oldcars-form-make_bottom').on('change',function(e){
+
+        var carproducer_id = jQuery(this).find('option:selected').val();
+        $.post(
+            '/wp-admin/admin-ajax.php', {
+                action: 'get_carproducers',
+                carproducer_id: carproducer_id,
+            }).success(function(response) {
+            	console.log(response);
+                jQuery("#rst-oldcars-form-model_bottom").prop('disabled', false);
+                jQuery("#rst-oldcars-form-model_bottom").children('option').remove();
+                jQuery("#rst-oldcars-form-model_bottom").append(response).niceSelect('update');
+        });
+
+    });
+
+    $("form").submit(function() {
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "/wp-content/themes/shop_auto/mail.php",
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				th.trigger("reset");
+				th.find('select').niceSelect('update')
+			}, 1000);
+		});
+		return false;
+	});
+
 });
