@@ -158,7 +158,7 @@ jQuery(document).ready(function($) {
 			alert("Thank you!");
 			setTimeout(function() {
 				th.trigger("reset");
-				th.find('select').niceSelect('update')
+				th.find('').niceSelect('update')
 			}, 1000);
 		});
 		return false;

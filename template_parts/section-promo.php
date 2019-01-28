@@ -1,4 +1,16 @@
 <section class="promo">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+				<div class="section-title center">
+					Выкуп авто в любом состоянии
+					<div class="section-sub-title">
+						Выезд в любую точку Украины
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container-fluid container-800" style="padding-left: 0">
 		<div class="row">
 			<div class="col-md-9 col-sm-8 hide-800">

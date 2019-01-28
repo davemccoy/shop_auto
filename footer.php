@@ -64,9 +64,9 @@
 					?>
 				</div>
 				<ul class="phones">
-					<li><a class="mail" href="mailto:9953@ukr.net">9953@ukr.net</a></li>
-					<li><a class="tel vdf" href="tel:+380505450081">+38 (050) 545 00 81</a></li>
-					<li><a class="tel ks" href="tel:+380505450081">+38 (050) 545 00 81</a></li>
+					<li><a class="mail" href="mailto:<?php the_field('email', 'template-setings'); ?>"><?php the_field('email', 'template-setings'); ?></a></li>
+					<li><a class="tel vdf" href="tel:<?php the_field('phone_vodaphone', 'template-setings'); ?>"><?php the_field('phone_vodaphone', 'template-setings'); ?></a></li>
+					<li><a class="tel ks" href="tel:<?php the_field('phone_kyivstar', 'template-setings'); ?>"><?php the_field('phone_kyivstar', 'template-setings'); ?></a></li>
 					<li class="call_back">						
 						<a href="javascript:void('0')">заказать обратный звонок</a>
 					</li>

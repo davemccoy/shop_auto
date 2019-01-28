@@ -3,15 +3,26 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title center">
-					Как происходит автовыкуп
+					<?php 
+					if(get_locale() == 'ru_RU') { ?>
+						Как происходит автовыкуп
+					<?php } else { ?>
+						Як відбувається автовикуп
+					<?php } ?>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="steps-wrapper">
 					<img src="<?php echo get_template_directory_uri();?>/_images/how_it_works.png" alt="">
 					<div class="step step1">
-						Обработка Вашей заявки<br>
-						и обсуждение по телефону
+						<?php 
+						if(get_locale() == 'ru_RU') { ?>
+							Обработка Вашей заявки<br>
+							и обсуждение по телефону
+						<?php } else { ?>
+							Обробка Вашої заявки <br>
+							і обговорення по телефону
+						<?php } ?>
 					</div>
 					<div class="step step2">
 						Вывод<br>

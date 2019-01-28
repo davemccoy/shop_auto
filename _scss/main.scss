@@ -83,6 +83,13 @@ body {
 	}
 }
 .header {
+	@include break(medium) {
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		background-color: #fff;
+		border-bottom: 1px solid #f1f1f1;
+	}
 	.top_header_row {
 		@include break(medium) {
 			display: none;
@@ -181,6 +188,21 @@ body {
 		top: -65px;
 		left: 0;
 		width: 100%;
+		.phones {
+			display: none;
+			@include break(medium) {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				li {
+					display: block;
+					list-style-type: none;
+					a {
+						color: #000;
+					}
+				}
+			}
+		}
 		@include break(medium) {
 			position: static;
 			justify-content: space-between;
@@ -246,15 +268,25 @@ body {
 		}
 	}
 }
-
+ 
 .promo {
 	background: url('../_images/promo-bg.jpg') top repeat-x;
 	height: 650px;
 	background-size: cover;
 	padding-top: 160px;
+	.section-sub-title {
+		text-align: center;
+		font-family: 'Bernier Distressed';
+		text-align: center;
+		font-size: 20px;
+	}
 	@include break(800) {
 		padding-top: 50px;
 		padding-bottom: 50px;
+	}
+	@include break(x-small) {
+		height: auto;
+		padding-bottom: 100px;
 	}
 }
 .container-800 {
@@ -264,7 +296,7 @@ body {
 	}
 	@include break(small) {
 		width: 100%;
-	    padding: 0 15px !important;
+		padding: 0 15px !important;
 	}
 }
 .center-block-800 {
@@ -419,6 +451,7 @@ body {
 	font-family: 'Bernier Distressed';
 	font-size: 34px;
 	margin-bottom: 30px;
+	line-height: 1.1;
 	&.center {
 		text-align: center;
 	}
@@ -436,6 +469,9 @@ body {
 		padding-top: 50px;
 		background: none;
 	}
+	@include break(x-small) {
+		padding-bottom: 0;
+	}
 	.triagle {
 		height: 90px;
 		position: absolute;
@@ -444,6 +480,10 @@ body {
 		width: 100%;
 		clip-path: polygon(50% 100%, 0 0, 100% 0);
 		background: #fff;
+		@include break(x-small) {
+			height: 30px;
+			bottom: -30px;
+		}
 	}
 	
 	p {
@@ -501,6 +541,9 @@ section.count {
 	background: url('../_images/count.jpg') center no-repeat;
 	background-size: cover;
 	padding: 150px 0 75px;
+	@include break(x-small) {
+		padding: 50px 0 0px;
+	}
 	.numbers {
 		display: flex;
 		justify-content: space-between;
@@ -556,6 +599,9 @@ section.count {
 	background-size: cover;
 	@include break(1400) {
 		padding: 0;
+	}
+	@include break(x-small) {
+		min-height: 0
 	}
 	.section-title {
 		margin: 60px 0;
@@ -722,6 +768,9 @@ section.count {
 		-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
 		clip-path: polygon(50% 100%, 0 0, 100% 0);
 		background: #fff;
+		@include break(x-small) {
+			display: none;
+		}
 	}
 }
 
@@ -809,6 +858,10 @@ section.count {
 	@include break(medium) {
 		padding-top: 100px;
 	}
+	@include break(x-small) {
+		padding-top: 50px;
+		padding-bottom: 0px;	
+	}
 	.section-description {
 		text-align: center;
 		font-family: 'Brush Script MT';
@@ -851,6 +904,9 @@ section.count {
 			line-height: 80px;
 			text-align: center;
 			margin-bottom: 15px;
+			@include break(x-small) {
+				width: 20%;
+			}
 			img {
 				display: inline-block;
 				width: auto;
@@ -1202,6 +1258,9 @@ section.count {
 	}
 	.infographic {
 		margin-bottom: 110px;
+		@include break(x-small) {
+			margin-bottom: 0;
+		}
 	}
 }
 

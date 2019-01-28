@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 
-
+	
 <?php get_template_part('template_parts/section', 'promo')?>
 <section class="about">
 	<div class="container">

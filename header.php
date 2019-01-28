@@ -20,6 +20,7 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -33,54 +34,53 @@
 		);
 		wp_nav_menu($args);
 		?>
-		<ul>
-			<li>12312</li>
-			<li>12312</li>
-			<li>sdfsdf</li>
-		</ul>
 	</nav>
 	<div class="mm-page">
-	<header class="header">
-		<div class="top_header_row">
-			<div class="container no-before no-after">
-				<div class="row">
-					<div class="col-xs-12">
-						<ul class="phones">
-							<li><a class="mail" href="mailto:9953@ukr.net">9953@ukr.net</a></li>
-							<li><a class="tel vdf" href="tel:+380505450081">+38 (050) 545 00 81</a></li>
-							<li><a class="tel ks" href="tel:+380505450081">+38 (050) 545 00 81</a></li>
-						</ul>
+		<header class="header">
+			<div class="top_header_row">
+				<div class="container no-before no-after">
+					<div class="row">
+						<div class="col-xs-12">
+							<ul class="phones">
+								<li><a class="mail" href="mailto:<?php the_field('email', 'template-setings'); ?>"><?php the_field('email', 'template-setings'); ?></a></li>
+								<li><a class="tel vdf" href="tel:<?php the_field('phone_vodaphone', 'template-setings'); ?>"><?php the_field('phone_vodaphone', 'template-setings'); ?></a></li>
+								<li><a class="tel ks" href="tel:<?php the_field('phone_kyivstar', 'template-setings'); ?>"><?php the_field('phone_kyivstar', 'template-setings'); ?></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="bottom_header_row">
-				<div class="logo">
-					<?php if( is_front_page() ){ ?>
-						<img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt="">
-					<?php }
-					else { ?>
-						<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt=""></a>
-					<?php }
-					?>
-				</div>
-				<button class="hamburger hamburger--collapse js-open-nav" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-				<div class="menu">
-					<?php $args = array(
-						'theme_location' => 'top',
-						'container'=> 'nav',
-						'menu_class' => 'nav nav-pills header-menu',
-						'menu_id' => 'header-nav',
-						'fallback_cb' => false
-					);
-					wp_nav_menu($args);
-					?>
+			<div class="container">
+				<div class="bottom_header_row">
+					<div class="logo">
+						<?php if( is_front_page() ){ ?>
+							<img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt="">
+						<?php }
+						else { ?>
+							<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt=""></a>
+						<?php }
+						?>
+					</div>
+					<ul class="phones">
+						<li><a class="tel vdf" href="tel:<?php the_field('phone_vodaphone', 'template-setings'); ?>"><?php the_field('phone_vodaphone', 'template-setings'); ?></a></li>
+						<li><a class="tel ks" href="tel:<?php the_field('phone_kyivstar', 'template-setings'); ?>"><?php the_field('phone_kyivstar', 'template-setings'); ?></a></li>
+					</ul>
+					<button class="hamburger hamburger--collapse js-open-nav" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+					<div class="menu">
+						<?php $args = array(
+							'theme_location' => 'top',
+							'container'=> 'nav',
+							'menu_class' => 'nav nav-pills header-menu',
+							'menu_id' => 'header-nav',
+							'fallback_cb' => false
+						);
+						wp_nav_menu($args);
+						?>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>	
+		</header>
