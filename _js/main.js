@@ -164,4 +164,14 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
+	$('.call_back a').click(function() {
+		$('.js-call-back-popup').fadeIn();
+		$('body').addClass('no-scroll');
+	})
+
+	$('.js-call-back-popup .overlay').click(function() {
+		$(this).parent().fadeOut();
+		$('body').removeClass('no-scroll');
+	})
+
 });

@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 
-	
+
 <?php get_template_part('template_parts/section', 'promo')?>
 <section class="about">
 	<div class="container">
@@ -208,186 +208,128 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-ms-12">
 				<div class="testimonilas_slider owl-carousel">
-					<div class="slide">
-						<div class="photo">
-							<img src="<?php echo get_template_directory_uri();?>/_images/testimonial.png" alt="">
-						</div>
-						<div class="name">
-							Михаил
-							<span class="city">г. Одесса</span>
-						</div>
-						<div class="text">
-							Впервые продавал машину и боялся наткнутся на не добросовестных покупателей, долго присматривался, но никак не мог выбрать у кого продавать. После диалога с менеджером данного автовыкупа, я понял, что обратился по адресу. Всё сделали быстро, помогли оформить документы. Спасибо вам!
-						</div>
-						<div class="date">
-							25.12.2018
-						</div>
-					</div>
-					<div class="slide">
-						<div class="photo">
-							<img src="<?php echo get_template_directory_uri();?>/_images/testimonial.png" alt="">
-						</div>
-						<div class="name">
-							Михаил
-							<span class="city">г. Одесса</span>
-						</div>
-						<div class="text">
-							Впервые продавал машину и боялся наткнутся на не добросовестных покупателей, долго присматривался, но никак не мог выбрать у кого продавать. После диалога с менеджером данного автовыкупа, я понял, что обратился по адресу. Всё сделали быстро, помогли оформить документы. Спасибо вам!
-						</div>
-						<div class="date">
-							25.12.2018
-						</div>
-					</div>
-					<div class="slide">
-						<div class="photo">
-							<img src="<?php echo get_template_directory_uri();?>/_images/testimonial.png" alt="">
-						</div>
-						<div class="name">
-							Михаил
-							<span class="city">г. Одесса</span>
-						</div>
-						<div class="text">
-							Впервые продавал машину и боялся наткнутся на не добросовестных покупателей, долго присматривался, но никак не мог выбрать у кого продавать. После диалога с менеджером данного автовыкупа, я понял, что обратился по адресу. Всё сделали быстро, помогли оформить документы. Спасибо вам!
-						</div>
-						<div class="date">
-							25.12.2018
-						</div>
-					</div>
-					<div class="slide">
-						<div class="photo">
-							<img src="<?php echo get_template_directory_uri();?>/_images/testimonial.png" alt="">
-						</div>
-						<div class="name">
-							Михаил
-							<span class="city">г. Одесса</span>
-						</div>
-						<div class="text">
-							Впервые продавал машину и боялся наткнутся на не добросовестных покупателей, долго присматривался, но никак не мог выбрать у кого продавать. После диалога с менеджером данного автовыкупа, я понял, что обратился по адресу. Всё сделали быстро, помогли оформить документы. Спасибо вам!
-						</div>
-						<div class="date">
-							25.12.2018
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="map_section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title center">
-					наши представители по всех регионах
-				</div>
-				<div class="section-description">
-					Выберите Ваш регион и узнайте <br>
-					о выкупе авто в этом регионе более подробно
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="map-holder">
-					<?php include_once('template_parts/interactive-map.svg.php'); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+					<?php 
+					$wp_query = new WP_Query(array( 
+						'post_type' => 'testimonials', 
+						'post_status' => 'publish', 
+						'posts_per_page' => -1) ); 
+						while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-<section class="faq_section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title center">
-					часто задаваемые вопросы
+							<div class="slide">
+								<div class="photo">
+									<?php the_post_thumbnail(); ?>
+								</div>
+								<div class="name">
+									<?php the_title() ?>
+								</div>
+								<div class="text">
+									<?php the_content()?>
+								</div>
+							</div>
+
+						<?php endwhile; wp_reset_query(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-7">
-				<div class="faq_acradeon">
-					<div class="item">
-						<div class="inner">
-							Какие автомобили вы покупаете?
-							<a href="javascript:void('0')">+</a>
-							<div class="answer" style="display: none;">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, perferendis. Hic cupiditate, a, ab at, voluptatem voluptas, impedit illum amet tempore vitae veritatis. Quia nobis deleniti amet earum enim adipisci.
-							</div>
-						</div>
+	</section>
+	<section class="map_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title center">
+						наши представители по всех регионах
 					</div>
-					<div class="item">
-						<div class="inner">
-							Какие автомобили вы покупаете?
-							<a href="javascript:void('0')">+</a>
-							<div class="answer" style="display: none;">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, perferendis. Hic cupiditate, a, ab at, voluptatem voluptas, impedit illum amet tempore vitae veritatis. Quia nobis deleniti amet earum enim adipisci.
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="inner">
-							Какие автомобили вы покупаете?
-							<a href="javascript:void('0')">+</a>
-							<div class="answer" style="display: none;">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, perferendis. Hic cupiditate, a, ab at, voluptatem voluptas, impedit illum amet tempore vitae veritatis. Quia nobis deleniti amet earum enim adipisci.
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="inner">
-							Какие автомобили вы покупаете?
-							<a href="javascript:void('0')">+</a>
-							<div class="answer" style="display: none;">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, perferendis. Hic cupiditate, a, ab at, voluptatem voluptas, impedit illum amet tempore vitae veritatis. Quia nobis deleniti amet earum enim adipisci.
-							</div>
-						</div>
+					<div class="section-description">
+						Выберите Ваш регион и узнайте <br>
+						о выкупе авто в этом регионе более подробно
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3">
-				<div class="call_back">
-					<a href="javascript:void('0')">заказать обратный звонок</a>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="map-holder">
+						<?php include_once('template_parts/interactive-map.svg.php'); ?>
+					</div>
 				</div>
-				
-				<form class="price_request">
-					<div class="form_title">
-						Узнать стоимость своего авто
-						в пару кликов 
-					</div>
-					<div class="inputs_wrapper">
-						<select class="input" name="" id="">
-							<option value="0" style="color:#CCC;">Год выпуска</option>
-							<script>
-								var year = new Date().getFullYear();
-								for (var i = year; i>=1910;i--) {
-									document.write('<option value="'+i+'">'+i+'</option>');
-								}
-							</script>
-						</select>
-						<select class="input" name="" id="rst-oldcars-form-make_bottom">
-							<?php
-							$wpdb_sale = new wpdb( "shopavto_db", "BsDsJFhE", "shopavto_db", "shopavto.mysql.tools" );
-							$q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = 0) WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
-							echo '<option selected="selected" value="0">Марка авто</option>';
-							foreach($q as $row) {
-								echo '<option value="'.$row->term_id.'">'.$row->name.'</option>';
-							}?>
-
-						</select>
-						<select class="input" name="" id="rst-oldcars-form-model_bottom" disabled="true">
-							<option value="">Модель авто</option>
-						</select>
-
-						<input class="input" type="tel" placeholder="Номер телефона">
-					</div>
-					<div class="send_btn">
-						<button class="btn">Узнать</button>
-					</div>
-				</form>
 			</div>
 		</div>
-	</div>
-</section>
-<?php get_footer(); ?>
+	</section>
+
+	<section class="faq_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title center">
+						часто задаваемые вопросы
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7">
+					<div class="faq_acradeon">
+						<?php 
+						$wp_query = new WP_Query(array( 
+							'post_type' => 'faq', 
+							'post_status' => 'publish', 
+							'posts_per_page' => -1) ); 
+							while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+								<div class="item">
+									<div class="inner">
+										<?php the_title(); ?>
+										<a href="javascript:void('0')">+</a>
+										<div class="answer" style="display: none;">
+											<?php the_content(); ?>
+										</div>
+									</div>
+								</div>
+
+							<?php endwhile; wp_reset_query(); ?>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3">
+						<div class="call_back">
+							<a href="javascript:void('0')">заказать обратный звонок</a>
+						</div>
+
+						<form class="price_request">
+							<div class="form_title">
+								Узнать стоимость своего авто
+								в пару кликов 
+							</div>
+							<div class="inputs_wrapper">
+								<select class="input" name="" id="">
+									<option value="0" style="color:#CCC;">Год выпуска</option>
+									<script>
+										var year = new Date().getFullYear();
+										for (var i = year; i>=1910;i--) {
+											document.write('<option value="'+i+'">'+i+'</option>');
+										}
+									</script>
+								</select>
+								<select class="input" name="" id="rst-oldcars-form-make_bottom">
+									<?php
+									$wpdb_sale = new wpdb( "shopavto_db", "BsDsJFhE", "shopavto_db", "shopavto.mysql.tools" );
+									$q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = 0) WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
+									echo '<option selected="selected" value="0">Марка авто</option>';
+									foreach($q as $row) {
+										echo '<option value="'.$row->term_id.'">'.$row->name.'</option>';
+									}?>
+
+								</select>
+								<select class="input" name="" id="rst-oldcars-form-model_bottom" disabled="true">
+									<option value="">Модель авто</option>
+								</select>
+
+								<input class="input" type="tel" placeholder="Номер телефона">
+							</div>
+							<div class="send_btn">
+								<button class="btn">Узнать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<?php get_footer(); ?>

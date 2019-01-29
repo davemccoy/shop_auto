@@ -59,6 +59,7 @@
 .no-csspointerevents .nice-select.open .list { display: block; }
 
 body { background: #fff; color: #2d2d2d; font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; font-weight: normal; font-size: 15px; line-height: 24px; }
+body.no-scroll { overflow: hidden; }
 
 .page-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; }
 
@@ -180,6 +181,7 @@ section.count .numbers .number-item .text { font-size: 40px; font-family: 'Brush
 .gradient-section { text-align: center; color: #000; background-image: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#b7b7b7)); background-image: linear-gradient(to bottom, #ededed, #b7b7b7); font-size: 35px; font-family: 'Brush Script MT'; line-height: 0.8; padding: 30px 0; }
 
 .infographic { position: relative; padding: 0 163px; background: #fff url("../_images/decor.png") top center no-repeat; min-height: 922px; background-size: cover; }
+.infographic .call_back a { position: absolute; right: 0; top: 25px; padding-right: 25px; }
 @media (max-width: 1400px) { .infographic { padding: 0; } }
 @media (max-width: 478px) { .infographic { min-height: 0; } }
 .infographic .section-title { margin: 60px 0; }
@@ -193,7 +195,7 @@ section.count .numbers .number-item .text { font-size: 40px; font-family: 'Brush
 @media (max-width: 478px) { .infographic .items-holder br { display: none; } }
 .infographic .items-holder .item { position: absolute; }
 @media (max-width: 992px) { .infographic .items-holder .item { position: static; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; line-height: 1.1; text-align: left !important; margin-bottom: 25px; } }
-.infographic .items-holder .item img { position: absolute; }
+.infographic .items-holder .item img { position: absolute; max-width: initial; }
 @media (max-width: 992px) { .infographic .items-holder .item img { position: static; height: 124px; display: inline-block; margin-right: 10px; } }
 .infographic .items-holder .item.fst { left: 50%; top: 0; text-align: center; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 @media (max-width: 1200px) { .infographic .items-holder .item.fst { -webkit-transform: none; transform: none; } }
@@ -338,3 +340,10 @@ section.count .numbers .number-item .text { font-size: 40px; font-family: 'Brush
 
 .text-description { padding: 50px 0; background: url("../_images/text-description_bg.jpg") center no-repeat; background-size: cover; color: #fff; }
 .text-description .section-title { color: #fff; }
+
+.popup { position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; z-index: 999999; }
+.popup .price_request .send_btn { border: 1px solid #fff; border-top: none; }
+.popup .overlay { position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); }
+.popup .popup-content { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 350px; }
+
+.not_found_404 { text-align: center; font-size: 60px; margin: 150px 0; line-height: 1.5; }

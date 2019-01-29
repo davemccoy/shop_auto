@@ -2,6 +2,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<div class="call_back">
+					<a href="javascript:void('0')">заказать обратный звонок</a>
+				</div>
 				<div class="section-title center">
 					наши преимущества
 				</div>

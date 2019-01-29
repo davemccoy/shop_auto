@@ -77,5 +77,26 @@
 </footer>
 </div>
 <?php wp_footer(); ?>
+
+
+
+<div class="popup js-call-back-popup">
+	<div class="overlay"></div>
+	<div class="popup-content">
+		<form class="price_request">
+			<div class="form_title">
+				Наш менеджер перезвонит вам 
+				через пару минут
+			</div>
+			<div class="inputs_wrapper">
+				<input type="text" class="input" name="name" placeholder="Имя">
+				<input class="input" type="tel" name="tel" placeholder="Номер телефона">
+			</div>
+			<div class="send_btn">
+				<button class="btn">Узнать</button>
+			</div>
+		</form>
+	</div>
+</div>
 </body>
 </html>

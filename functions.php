@@ -91,3 +91,113 @@ function get_carproducers_callback(){
 	}
 	exit();
 }
+
+// Register Custom Post Type
+function tesimonials_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Отзывы', 'Post Type General Name', 'shop_auto' ),
+		'singular_name'         => _x( 'Отзыв', 'Post Type Singular Name', 'shop_auto' ),
+		'menu_name'             => __( 'Отзывы', 'shop_auto' ),
+		'name_admin_bar'        => __( 'Отзывы', 'shop_auto' ),
+		'archives'              => __( 'Архиви Отзывов', 'shop_auto' ),
+		'attributes'            => __( 'Отзывы атрибуты', 'shop_auto' ),
+		'parent_item_colon'     => __( 'Родительсктй', 'shop_auto' ),
+		'all_items'             => __( 'Все', 'shop_auto' ),
+		'add_new_item'          => __( 'Добавить', 'shop_auto' ),
+		'add_new'               => __( 'Добавить', 'shop_auto' ),
+		'new_item'              => __( 'Новый', 'shop_auto' ),
+		'edit_item'             => __( 'Редактировать', 'shop_auto' ),
+		'update_item'           => __( 'Обновить', 'shop_auto' ),
+		'view_item'             => __( 'Посмотреть', 'shop_auto' ),
+		'view_items'            => __( 'Посмотреть все', 'shop_auto' ),
+		'search_items'          => __( 'Искать', 'shop_auto' ),
+		'not_found'             => __( 'Не найдено', 'shop_auto' ),
+		'not_found_in_trash'    => __( 'Не найдено', 'shop_auto' ),
+		'featured_image'        => __( 'Миниатюра', 'shop_auto' ),
+		'set_featured_image'    => __( 'Уставить миниатюру', 'shop_auto' ),
+		'remove_featured_image' => __( 'Удалить миниатюру', 'shop_auto' ),
+		'use_featured_image'    => __( 'Использовать как миниатюру', 'shop_auto' ),
+		'insert_into_item'      => __( 'Вставить в', 'shop_auto' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'shop_auto' ),
+		'items_list'            => __( 'Items list', 'shop_auto' ),
+		'items_list_navigation' => __( 'Items list navigation', 'shop_auto' ),
+		'filter_items_list'     => __( 'Filter items list', 'shop_auto' ),
+	);
+	$args = array(
+		'label'                 => __( 'Отзыв', 'shop_auto' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'testimonials', $args );
+
+}
+add_action( 'init', 'tesimonials_post_type', 0 );
+
+
+
+// Register Custom Post Type
+function faq_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Вопросы и ответы', 'Post Type General Name', 'shop_auto' ),
+		'singular_name'         => _x( 'Вопрос и ответ', 'Post Type Singular Name', 'shop_auto' ),
+		'menu_name'             => __( 'Вопросы и ответы', 'shop_auto' ),
+		'name_admin_bar'        => __( 'Вопросы и ответы', 'shop_auto' ),
+		'archives'              => __( 'Архиви Вопросы и ответы', 'shop_auto' ),
+		'attributes'            => __( 'Вопросы и ответы атрибуты', 'shop_auto' ),
+		'parent_item_colon'     => __( 'Родительсктй', 'shop_auto' ),
+		'all_items'             => __( 'Все', 'shop_auto' ),
+		'add_new_item'          => __( 'Добавить', 'shop_auto' ),
+		'add_new'               => __( 'Добавить', 'shop_auto' ),
+		'new_item'              => __( 'Новый', 'shop_auto' ),
+		'edit_item'             => __( 'Редактировать', 'shop_auto' ),
+		'update_item'           => __( 'Обновить', 'shop_auto' ),
+		'view_item'             => __( 'Посмотреть', 'shop_auto' ),
+		'view_items'            => __( 'Посмотреть все', 'shop_auto' ),
+		'search_items'          => __( 'Искать', 'shop_auto' ),
+		'not_found'             => __( 'Не найдено', 'shop_auto' ),
+		'not_found_in_trash'    => __( 'Не найдено', 'shop_auto' ),
+		'featured_image'        => __( 'Миниатюра', 'shop_auto' ),
+		'set_featured_image'    => __( 'Уставить миниатюру', 'shop_auto' ),
+		'remove_featured_image' => __( 'Удалить миниатюру', 'shop_auto' ),
+		'use_featured_image'    => __( 'Использовать как миниатюру', 'shop_auto' ),
+		'insert_into_item'      => __( 'Вставить в', 'shop_auto' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'shop_auto' ),
+		'items_list'            => __( 'Items list', 'shop_auto' ),
+		'items_list_navigation' => __( 'Items list navigation', 'shop_auto' ),
+		'filter_items_list'     => __( 'Filter items list', 'shop_auto' ),
+	);
+	$args = array(
+		'label'                 => __( 'Вопросы и ответы', 'shop_auto' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor'),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'faq', $args );
+
+}
+add_action( 'init', 'faq_post_type', 0 );	

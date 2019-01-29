@@ -5,7 +5,7 @@
  * @subpackage shop_auto
  */
 get_header(); ?> 
-<section>
+<section style="margin: 150px 0">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
