@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="section-title center">
-					примеры выкупленных авто
+					<?php _e('примеры выкупленных авто', 'shop_auto')?>
 				</div>
 			</div>
 		</div>

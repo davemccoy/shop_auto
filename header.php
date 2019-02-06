@@ -36,11 +36,25 @@
 		?>
 	</nav>
 	<div class="mm-page">
-		<header class="header">
+		<header class="header js-check-stiky">
 			<div class="top_header_row">
 				<div class="container no-before no-after">
 					<div class="row">
 						<div class="col-xs-12">
+							<div class="stiky-menu-container">
+								<button class="js-show-menu"><span class="icon"></span>Меню</button>
+								<div class="stiky-menu" style="display: none;">
+									<?php $args = array(
+										'theme_location' => 'top',
+										'container'=> 'nav',
+										'menu_class' => 'nav nav-pills header-menu',
+										'menu_id' => 'header-nav',
+										'fallback_cb' => false
+									);
+									wp_nav_menu($args);
+									?>
+								</div>
+							</div>
 							<ul class="phones">
 								<li><a class="mail" href="mailto:<?php the_field('email', 'template-setings'); ?>"><?php the_field('email', 'template-setings'); ?></a></li>
 								<li><a class="tel vdf" href="tel:<?php the_field('phone_vodaphone', 'template-setings'); ?>"><?php the_field('phone_vodaphone', 'template-setings'); ?></a></li>

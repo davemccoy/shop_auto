@@ -13,7 +13,7 @@
 					<div class="slide">
 						<div class="thumb">
 							<img src="<?php echo get_template_directory_uri();?>/_images/car.jpg" alt="">
-							<a href="#">Читать</a>
+							<a href="#"><?php _e('Читать', 'shop_auto')?></a>
 						</div>
 						<div class="brand">Hyundai Solaris</div>
 						<div class="text">1,6 МТ 2012 г.в.</div>

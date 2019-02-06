@@ -3,54 +3,32 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title center">
-					<?php 
-					if(get_locale() == 'ru_RU') { ?>
-						Как происходит автовыкуп
-					<?php } else { ?>
-						Як відбувається автовикуп
-					<?php } ?>
+					<?php _e('Как происходит автовыкуп', 'shop_auto')?>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="steps-wrapper">
 					<img src="<?php echo get_template_directory_uri();?>/_images/how_it_works.png" alt="">
 					<div class="step step1">
-						<?php 
-						if(get_locale() == 'ru_RU') { ?>
-							Обработка Вашей заявки<br>
-							и обсуждение по телефону
-						<?php } else { ?>
-							Обробка Вашої заявки <br>
-							і обговорення по телефону
-						<?php } ?>
+					<?php _e('Обработка Вашей заявки<br> и обсуждение по телефону', 'shop_auto')?>
 					</div>
 					<div class="step step2">
-						Вывод<br>
-						взаимовыгодной<br>
-						цены 
+						<?php _e('Вывод<br> взаимовыгодной<br> цены ', 'shop_auto')?>
+						
 					</div>
 					<div class="step step3">
-						Осмотр авто<br>
-						в удобном для Вас <br> 
-						месте. (10-20 мин)  Мы не ездим <br>
-						по СТО и не <br> 
-						тратим Ваше время 
+						<?php _e('Осмотр авто<br> в удобном для Вас <br> месте. (10-20 мин)  Мы не ездим <br>по СТО и не <br> тратим Ваше время', 'shop_auto')?>
+						
 					</div>
 					<div class="step step4">
-						Заключение<br>
-						сделки
+						<?php _e('Заключение<br> сделки', 'shop_auto')?>						
 					</div>
 					<div class="step step5">
-						Оформление документов <br>
-						при согласии сторон <br>
-						(договор купли-продажи, <br>
-						переоформление, доверенность) <br>
-						оплачиваем мы 
+						<?php _e('Оформление документов <br>при согласии сторон <br>(договор купли-продажи, <br>переоформление, доверенность) <br>
+						оплачиваем мы ', 'shop_auto')?>
 					</div>
 					<div class="step step6">
-						Расчёт <br>
-						Ключи и документы <br>
-						в обмен на деньги
+						<?php _e('Расчёт <br>Ключи и документы <br>в обмен на деньги', 'shop_auto')?>
 					</div>
 				</div>
 			</div>

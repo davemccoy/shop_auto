@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="section-title center">
-					О нас
+					<?php _e('О нас', 'shop_auto')?>
 				</div>
 			</div>
 		</div>
@@ -23,27 +23,32 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-8">
 					<div class="italic-top-text">
-						Мы знаем, что Вы здесь не случайно...
+						<?php _e('Мы знаем, что Вы здесь не случайно...', 'shop_auto')?>
 					</div>
-					<p>И сейчас, пожалуй, самое время представиться. ShopAvto — это компания по выкупу, обмену и продаже подержанных авто по всей Украине. На рынке мы уже более 11 лет и за это время мы выкупили более 2000 как свежих так и заезженных авто. Цена в большинстве случаев доходит до 95% от рыночной стоимости автомобиля.</p>
-					<p>Самостоятельная продажа аварийного или любого проблемного авто – сложный процесс, на который требуется временные затраты. С компанией «ShopAvto» все гораздо проще – вы оставили заявку, мы произвели оценку и выдали деньги на руки.</p>
-					<p>Наши представители есть в каждой области, поэтому мы можем сами приехать в любую точку Украины и купить ваш автомобиль, уладив все вопросы с финансовыми компаниями, если это, например, залоговое авто.</p>
-					<p>Позвоните или оставьте заявку для продажи своего автомобиля прямо сейчас –  а мы сделаем всё чтобы оправдать Ваши ожидания.</p>
+					<p>
+					<?php _e('И сейчас, пожалуй, самое время представиться. ShopAvto — это компания по выкупу, обмену и продаже подержанных авто по всей Украине. На рынке мы уже более 11 лет и за это время мы выкупили более 2000 как свежих так и заезженных авто. Цена в большинстве случаев доходит до 95% от рыночной стоимости автомобиля.', 'shop_auto')?></p>
+					<p>
+					<?php _e('Самостоятельная продажа аварийного или любого проблемного авто – сложный процесс, на который требуется временные затраты. С компанией «ShopAvto» все гораздо проще – вы оставили заявку, мы произвели оценку и выдали деньги на руки.', 'shop_auto')?></p>
+					<p>
+					<?php _e('Наши представители есть в каждой области, поэтому мы можем сами приехать в любую точку Украины и купить ваш автомобиль, уладив все вопросы с финансовыми компаниями, если это, например, залоговое авто.', 'shop_auto')?></p>
+					<p>
+						<?php _e('Позвоните или оставьте заявку для продажи своего автомобиля прямо сейчас –  а мы сделаем всё чтобы оправдать Ваши ожидания.', 'shop_auto')?>
+					</p>
 				</div>
 				<div class="col-sm-4">
 					<div class="small-title">
-						Какие машины мы выкупаем:
+						<?php _e('Какие машины мы выкупаем:', 'shop_auto')?>
 					</div>
 					<ul class="wheels-list">
-						<li>Б/у машины</li>
-						<li>Новые машины</li>
-						<li>Машины без документов на разборку</li>
-						<li>Нерастаможенные машины</li>
-						<li>Машины после ДТП</li>
-						<li>Проблемные машины</li>
-						<li>Кредитные машины</li>
-						<li>Залоговые машины</li>
-						<li>Лизинговые машины</li>
+						<li><?php _e('Б/у машины', 'shop_auto')?></li>
+						<li><?php _e('Новые машины', 'shop_auto')?></li>
+						<li><?php _e('Машины без документов на разборку', 'shop_auto')?></li>
+						<li><?php _e('Нерастаможенные машины', 'shop_auto')?></li>
+						<li><?php _e('Машины после ДТП', 'shop_auto')?></li>
+						<li><?php _e('Проблемные машины', 'shop_auto')?></li>
+						<li><?php _e('Кредитные машины', 'shop_auto')?></li>
+						<li><?php _e('Залоговые машины', 'shop_auto')?></li>
+						<li><?php _e('Лизинговые машины', 'shop_auto')?></li>
 					</ul>
 				</div>
 			</div>
@@ -57,38 +62,37 @@ get_header(); ?>
 			<div class="col-md-12 numbers">
 				<div class="number-item">
 					<div class="number">
-						11
+						<img src="<?php echo get_template_directory_uri();?>/_images/count1.png" alt="">
 					</div>
 					<div class="text">
-						лет на<br>
-						рынке
+						
+						<?php _e('лет на<br>рынке', 'shop_auto')?>
 					</div>
 				</div>
 				<div class="number-item">
 					<div class="number">
-						1957
+						<img src="<?php echo get_template_directory_uri();?>/_images/count2.png" alt="">
 					</div>
 					<div class="text">
-						выкуплено<br>
-						автомобилей
+						<?php _e('выкуплено<br>автомобилей', 'shop_auto')?>
+						
 					</div>
 				</div>
 				<div class="number-item">
 					<div class="number">
-						1917
+						<img src="<?php echo get_template_directory_uri();?>/_images/count3.png" alt="">
 					</div>
 					<div class="text">
-						продано<br>
-						автомобилей
+						<?php _e('продано<br>автомобилей', 'shop_auto')?>
+						
 					</div>
 				</div>
 				<div class="number-item">
 					<div class="number">
-						175
+						<img src="<?php echo get_template_directory_uri();?>/_images/count4.png" alt="">
 					</div>
 					<div class="text">
-						представителей<br>
-						в регионах
+						<?php _e('представителей<br>в регионах', 'shop_auto')?>
 					</div>
 				</div>
 			</div>
@@ -96,8 +100,8 @@ get_header(); ?>
 	</div>
 </section>
 <section class="gradient-section">
-	Вы можете все сделать самостоятельно, <br>
-	пока другие уже получили оплату от нас за своё авто.
+	<?php _e('Вы можете все сделать самостоятельно, <br>
+	пока другие уже получили оплату от нас за своё авто.', 'shop_auto')?>
 </section>
 <?php get_template_part('template_parts/section', 'infographics')?>
 <?php get_template_part('template_parts/section', 'howit')?>
@@ -106,11 +110,10 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title center">
-					Марки авто на выбор
+					<?php _e('Марки авто на выбор', 'shop_auto')?>
 				</div>
 				<div class="section-description">
-					Здесь Вы можете выбрать конкретную марку авто<br>
-					и про читать о его автовыкупе подробнее
+					<?php _e('Здесь Вы можете выбрать конкретную марку авто<br> и прочитать о его автовыкупе подробнее', 'shop_auto')?>
 				</div>
 			</div>
 		</div>
@@ -201,7 +204,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title center">
-					ОТЗЫВЫ
+					<?php _e('ОТЗЫВЫ', 'shop_auto')?>
 				</div>
 			</div>
 		</div>
@@ -238,11 +241,12 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title center">
-						наши представители по всех регионах
+						
+						<?php _e('наши представители по всех регионах', 'shop_auto')?>
 					</div>
 					<div class="section-description">
-						Выберите Ваш регион и узнайте <br>
-						о выкупе авто в этом регионе более подробно
+						<?php _e('Выберите Ваш регион и узнайте <br>о выкупе авто в этом регионе более подробно', 'shop_auto')?>
+						
 					</div>
 				</div>
 			</div>
@@ -261,7 +265,9 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title center">
-						часто задаваемые вопросы
+						
+						<?php _e('часто задаваемые вопросы', 'shop_auto')?>
+
 					</div>
 				</div>
 			</div>
@@ -290,17 +296,20 @@ get_header(); ?>
 					</div>
 					<div class="col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3">
 						<div class="call_back">
-							<a href="javascript:void('0')">заказать обратный звонок</a>
+							<a href="javascript:void('0')"><?php _e('заказать обратный звонок', 'shop_auto')?></a>
 						</div>
 
 						<form class="price_request">
+							<div class="thx-message" style="display: none">
+								<?php _e('Спасибо за заявку. Мы скоро свяжемся с Вами', 'shop_auto')?>
+							</div>
 							<div class="form_title">
-								Узнать стоимость своего авто
-								в пару кликов 
+								
+								<?php _e('Узнать стоимость своего авто в пару кликов ', 'shop_auto')?>
 							</div>
 							<div class="inputs_wrapper">
 								<select class="input" name="" id="">
-									<option value="0" style="color:#CCC;">Год выпуска</option>
+									<option value="0" style="color:#CCC;"><?php _e('Год выпуска', 'shop_auto')?></option>
 									<script>
 										var year = new Date().getFullYear();
 										for (var i = year; i>=1910;i--) {
@@ -325,7 +334,7 @@ get_header(); ?>
 								<input class="input" type="tel" placeholder="Номер телефона">
 							</div>
 							<div class="send_btn">
-								<button class="btn">Узнать</button>
+								<button class="btn"><?php _e('Узнать', 'shop_auto')?></button>
 							</div>
 						</form>
 					</div>

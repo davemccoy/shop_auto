@@ -76,7 +76,7 @@
 	</div>
 </footer>
 </div>
-<?php wp_footer(); ?>
+
 
 
 
@@ -84,6 +84,9 @@
 	<div class="overlay"></div>
 	<div class="popup-content">
 		<form class="price_request">
+			<div class="thx-message" style="display: none">
+				Спасибо за заявку. Мы скоро свяжемся с Вами
+			</div>
 			<div class="form_title">
 				Наш менеджер перезвонит вам 
 				через пару минут
@@ -93,10 +96,39 @@
 				<input class="input" type="tel" name="tel" placeholder="Номер телефона">
 			</div>
 			<div class="send_btn">
-				<button class="btn">Узнать</button>
+				<button class="btn">Отправить</button>
 			</div>
 		</form>
 	</div>
 </div>
+
+
+
+<div class="map-tooltip"></div>
+<?php wp_footer(); ?>
+<script>
+	jQuery(document).ready(function($) {
+		$("form").submit(function() {
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: "<?php echo get_template_directory_uri();?>/mail.php",
+				data: th.serialize()
+			}).done(function() {
+				th.find('.thx-message').fadeIn();
+
+				setTimeout(function() {
+					th.find('.thx-message').fadeOut();
+					if (th.closest('.js-call-back-popup').length) {
+						$('.js-call-back-popup').fadeOut();
+					}
+					th.trigger("reset");
+					th.find('select').niceSelect('update')
+				}, 3000);
+			});
+			return false;
+		});
+	})
+</script>
 </body>
 </html>

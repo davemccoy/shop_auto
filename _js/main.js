@@ -24,6 +24,10 @@ jQuery(document).ready(function($) {
 		})
 	}
 
+	$('.js-show-menu').click(function() {
+		$(this).toggleClass('open').next().slideToggle();
+	})
+
 	$('select').niceSelect();
 
 	if ($('.promo-slider').length) {
@@ -118,51 +122,37 @@ jQuery(document).ready(function($) {
 
 	$('#rst-oldcars-form-make').on('change',function(e){
 
-        var carproducer_id = jQuery(this).find('option:selected').val();
-        $.post(
-            '/wp-admin/admin-ajax.php', {
-                action: 'get_carproducers',
-                carproducer_id: carproducer_id,
-            }).success(function(response) {
-            	console.log(response);
-                jQuery("#rst-oldcars-form-model").prop('disabled', false);
-                jQuery("#rst-oldcars-form-model").children('option').remove();
-                jQuery("#rst-oldcars-form-model").append(response).niceSelect('update');
-        });
+		var carproducer_id = jQuery(this).find('option:selected').val();
+		$.post(
+			'/wp-admin/admin-ajax.php', {
+				action: 'get_carproducers',
+				carproducer_id: carproducer_id,
+			}).success(function(response) {
+				console.log(response);
+				jQuery("#rst-oldcars-form-model").prop('disabled', false);
+				jQuery("#rst-oldcars-form-model").children('option').remove();
+				jQuery("#rst-oldcars-form-model").append(response).niceSelect('update');
+			});
 
-    });
-
-    $('#rst-oldcars-form-make_bottom').on('change',function(e){
-
-        var carproducer_id = jQuery(this).find('option:selected').val();
-        $.post(
-            '/wp-admin/admin-ajax.php', {
-                action: 'get_carproducers',
-                carproducer_id: carproducer_id,
-            }).success(function(response) {
-            	console.log(response);
-                jQuery("#rst-oldcars-form-model_bottom").prop('disabled', false);
-                jQuery("#rst-oldcars-form-model_bottom").children('option').remove();
-                jQuery("#rst-oldcars-form-model_bottom").append(response).niceSelect('update');
-        });
-
-    });
-
-    $("form").submit(function() {
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "/wp-content/themes/shop_auto/mail.php",
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				th.trigger("reset");
-				th.find('').niceSelect('update')
-			}, 1000);
 		});
-		return false;
-	});
+
+	$('#rst-oldcars-form-make_bottom').on('change',function(e){
+
+		var carproducer_id = jQuery(this).find('option:selected').val();
+		$.post(
+			'../../wp-admin/admin-ajax.php', {
+				action: 'get_carproducers',
+				carproducer_id: carproducer_id,
+			}).success(function(response) {
+				console.log(response);
+				jQuery("#rst-oldcars-form-model_bottom").prop('disabled', false);
+				jQuery("#rst-oldcars-form-model_bottom").children('option').remove();
+				jQuery("#rst-oldcars-form-model_bottom").append(response).niceSelect('update');
+			});
+
+		});
+
+	
 
 	$('.call_back a').click(function() {
 		$('.js-call-back-popup').fadeIn();
@@ -174,4 +164,35 @@ jQuery(document).ready(function($) {
 		$('body').removeClass('no-scroll');
 	})
 
+
+	if ($(window).width() > 992) {
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();    
+			if (scroll > 100) {
+				$(".js-check-stiky").addClass("sticky"); 
+			} else {
+				$(".js-check-stiky").removeClass("sticky"); 
+			}
+		})
+	}
+
+});
+
+var tooltip = document.querySelector('.map-tooltip');
+// iterate throw all `path` tags
+[].forEach.call(document.querySelectorAll('.district'), function(item) {
+  item.addEventListener('mouseenter', function() {
+  	tooltip.innerHTML = item.getAttribute('data-tooltip');
+  	tooltip.style.display = 'block';
+  });
+  
+  item.addEventListener('mousemove', function(event) {
+  	tooltip.style.top = event.clientY + 'px';
+  	tooltip.style.left = event.clientX + 'px';
+  });
+  
+  // when mouse leave hide the tooltip
+  item.addEventListener('mouseleave', function(){
+  	tooltip.style.display = 'none';
+  });
 });

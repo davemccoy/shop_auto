@@ -2,7 +2,7 @@
 @import "break";
 @import "hamburgers/hamburgers";
 @import "niceselect/nice-select";
-$main: #ed373b;
+$main: #d5353b;
 
 body {
 	background: #fff;
@@ -93,6 +93,96 @@ body {
 		background-color: #fff;
 		border-bottom: 1px solid #f1f1f1;
 	}
+	&:not(.sticky) {
+		.stiky-menu-container {
+			display: none;
+		}
+	}
+	&.sticky {
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		.bottom_header_row {
+			display: none;
+		}
+		.stiky-menu-container {
+			button {
+				background: none;
+				border: none;
+				display: flex;
+				align-items: center;
+				font-weight: 500;
+				color: #393939;
+				text-transform: uppercase;
+				&:focus {
+					outline: none;
+				}
+				.icon {
+					display: inline-block;
+					margin-right: 10px;
+					width: 27px;
+					height: 21px;
+					background: url('../_images/sprite.png') -99px -172px no-repeat;
+				}
+			}
+		}
+		.top_header_row {
+			.container {
+				.row {
+					> div {
+						display: flex;
+						align-items: center;
+					}
+				}
+			}
+		}
+		.stiky-menu {
+			position: absolute;
+			top: 53px;
+			left: 0;
+			background-color: #fff;
+			width: 320px;
+			ul {
+				margin: 0;
+				padding: 0;
+				display: block;
+				&.sub-menu {
+					position: absolute;
+					width: 100%;
+					display: none;
+					background-color: #fff;
+					padding: 20px;
+					top: 0;
+					right: -320px;
+					box-shadow: 0px 3px 12px 0px rgba(25,25,25,0.32);
+				}
+				> li {
+					list-style-type: none;
+					display: block;
+					position: relative;
+					display: block;
+					position: relative;
+					line-height: 35px;
+					padding: 0 15px;
+					a {
+						color: #2d2d2d;
+						font-size: 14px;
+						font-weight: 500;
+						text-transform: uppercase;
+						text-decoration: none;
+						display: block;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+					&:hover {
+						> .sub-menu {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
 	.top_header_row {
 		@include break(medium) {
 			display: none;
@@ -138,6 +228,7 @@ body {
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
+				flex-grow: 1;
 				li {
 					display: block;
 					a {
@@ -364,11 +455,12 @@ body {
 		line-height: 60px;
 		border-radius: 50px;
 		position: relative;
-		background: $main;
+		background: $main; 
 		color: #fff;
 		font-size: 17px;
 		font-family: 'Bernier Distressed';
 		box-shadow: 0px 3px 12px 0px rgba(25, 25, 25, 0.49);
+		opacity: .9;
 		&:before {
 			content: "";
 			width: 66px;
@@ -392,6 +484,24 @@ body {
 	position: relative;
 	z-index: 11;
 	box-shadow: 0px 3px 12px 0px rgba(25, 25, 25, 0.49);
+	.thx-message {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: calc(100% + 73px);
+		border-radius: 25px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 25px;
+		text-align: center;
+		z-index: 100;
+		background: #f0f0f0;
+		padding: 0 25px;
+		box-shadow: 0px 3px 12px 0px rgba(25,25,25,0.49);
+	}
 	.form_title {
 		font-size: 20px;
 		text-align: center;
@@ -444,6 +554,9 @@ body {
 			position: relative;
 			top: 35px;
 			text-transform: uppercase;
+			&:focus {
+				outline: none;
+			}
 		}
 	}
 }
@@ -490,14 +603,15 @@ body {
 	}
 	
 	p {
-		font-size: 14px;
+		font-size: 16px;
 		margin-bottom: 25px;
+		text-align: justify;
 		&:last-child {
 			margin-bottom: 0;
-		} 
+		}  
 	}
 	.italic-top-text {
-		font-family: 'Brush Script MT';
+		font-family: 'Garamond cond';
 		font-size: 32px;
 	}
 	.small-title {
@@ -566,16 +680,15 @@ section.count {
 				width: 100%;		
 			}
 			.number {
-				color: $main;
-				font-family: 'Bernier Distressed';
-				text-align: center;
-				font-size: 75px;
-				margin-bottom: 5px;
-				line-height: 1;
+				img {
+					max-height: 65px;
+					display: block;
+					margin: 0 auto; 
+				}
 			}
 			.text {
 				font-size: 40px;
-				font-family: 'Brush Script MT', Arial, sans-serif;
+				font-family: 'Garamond cond', Arial, sans-serif;
 				text-align: center;
 				color: #fff;
 				line-height: 0.7;
@@ -589,7 +702,7 @@ section.count {
 	color: #000;
 	background-image: linear-gradient(to bottom, #ededed, #b7b7b7);
 	font-size: 35px;
-	font-family: 'Brush Script MT';
+	font-family: 'Garamond cond';
 	line-height: 0.8;
 	padding: 30px 0;
 }
@@ -606,6 +719,9 @@ section.count {
 			right: 0;
 			top: 25px;
 			padding-right: 25px;
+			@include break(medium) {
+				display: none;
+			}
 		}
 	}
 	@include break(1400) {
@@ -788,7 +904,7 @@ section.count {
 
 .how_it_works {
 	background: $main;
-	padding: 150px 0 50px;
+	padding: 80px 0 50px;
 	min-height: 700px;	
 	@include break(medium) {
 		display: none;
@@ -876,7 +992,7 @@ section.count {
 	}
 	.section-description {
 		text-align: center;
-		font-family: 'Brush Script MT';
+		font-family: 'Garamond cond';
 		margin: 25px 0 55px;
 		font-size: 35px;
 	}
@@ -1015,7 +1131,7 @@ section.count {
 	}
 	.section-description {
 		text-align: center;
-		font-family: 'Brush Script MT';
+		font-family: 'Garamond cond';
 		margin: 25px 0 55px;
 		font-size: 35px;
 		color: #fff;
@@ -1047,6 +1163,9 @@ section.count {
 		@include break(desktop) {
 			display: none;
 		}
+	}
+	.map-holder {
+		position: relative;
 	}
 	.interactive-map {
 		filter: drop-shadow( 0px 0px 15px rgba(0, 0, 0, .7));
@@ -1248,8 +1367,17 @@ section.count {
 
 .single, .page {
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Brush Script MT';
+		font-family: 'Garamond cond';
 		color: $main;
+	}
+	h1, h2 {
+		font-size: 30px;
+	}
+	h3, h4 {
+		font-size: 24px;
+	}
+	h5, h6 {
+		font-size: 20px;
 	}
 	img {
 		max-width: 100%;
@@ -1408,4 +1536,20 @@ section.count {
 	font-size: 60px;
 	margin: 150px 0;
 	line-height: 1.5;
+}
+
+.map-tooltip {
+  position: fixed;
+  display: none;
+  z-index: 10000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border:#d3d3d3 solid 1px;
+  background: #fff;
+  color: black;
+  padding: 8px;
+  pointer-events:none;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // transform: translate(-190px, -75px); 
 }

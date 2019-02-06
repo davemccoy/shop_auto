@@ -3,9 +3,10 @@
 		<div class="row">
 			<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
 				<div class="section-title center">
-					Выкуп авто в любом состоянии
+					
+					<?php _e('Выкуп авто в любом состоянии', 'shop_auto')?>
 					<div class="section-sub-title">
-						Выезд в любую точку Украины
+						<?php _e('Выезд в любую точку Украины', 'shop_auto')?>
 					</div>
 				</div>
 			</div>
@@ -16,19 +17,23 @@
 			<div class="col-md-9 col-sm-8 hide-800">
 				<div class="promo-slider owl-carousel">
 					<div class="slide">
-						<div class="text container">Мы готовы приехать и <span>купить</span> Ваш автомобиль </div>
+						<div class="text">
+							<?php _e('Мы готовы приехать и <span>купить</span> Ваш автомобиль ', 'shop_auto')?>
+						</div>
 						<div class="img">
 							<img src="<?php echo get_template_directory_uri();?>/_images/car1.png" alt="">
 						</div>
 					</div>
 					<div class="slide">
-						<div class="text container">Автовыкуп - Дорого, Быстро. Выкуп сразу в день осмотра</div>
+						<div class="text">
+							<?php _e('Автовыкуп - Дорого, Быстро. Выкуп сразу в день осмотра', 'shop_auto')?>
+						</div>
 						<div class="img">
 							<img src="<?php echo get_template_directory_uri();?>/_images/car2.png" alt="">
 						</div>
 					</div>
 					<div class="slide">
-						<div class="text container"></div>
+						<div class="text"></div>
 						<div class="img">
 							<img src="<?php echo get_template_directory_uri();?>/_images/car3.png" alt="">
 						</div>
@@ -37,17 +42,21 @@
 			</div>
 			<div class="col-md-3 col-sm-4 center-block-800">
 				<div class="call_back">
-					<a href="javascript:void('0')">заказать обратный звонок</a>
+					<a href="javascript:void('0')">
+						<?php _e('заказать обратный звонок', 'shop_auto')?>
+					</a>
 				</div>
 				
 				<form class="price_request">
+					<div class="thx-message" style="display: none">
+						<?php _e('Спасибо за заявку. Мы скоро свяжемся с Вами', 'shop_auto')?>
+					</div>
 					<div class="form_title">
-						Узнать стоимость своего авто
-						в пару кликов 
+						<?php _e('Узнать стоимость своего авто в пару кликов ', 'shop_auto')?>
 					</div>
 					<div class="inputs_wrapper">
 						<select class="input" name="year" id="">
-							<option value="0" style="color:#CCC;">Год выпуска</option>
+							<option value="0" style="color:#CCC;"><?php _e('Год выпуска', 'shop_auto')?></option>
 							<script>
 								var year = new Date().getFullYear();
 								for (var i = year; i>=1910;i--) {
@@ -72,7 +81,7 @@
 						<input class="input" type="tel" name="tel" placeholder="Номер телефона">
 					</div>
 					<div class="send_btn">
-						<button class="btn">Узнать</button>
+						<button class="btn"><?php _e('Узнать', 'shop_auto')?></button>
 					</div>
 				</form>
 			</div>

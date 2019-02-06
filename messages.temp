@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-06 19:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: comments.php:42
+#, php-format
+msgid "Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Выйти?</a>"
+msgstr ""
+
+#: comments.php:44
+#, php-format
+msgid "Вы можете использовать следующие <abbr>HTML</abbr> тэги: %s"
+msgstr ""
+
+#: functions.php:101
+msgctxt "Post Type General Name"
+msgid "Отзывы"
+msgstr ""
+
+#: functions.php:102
+msgctxt "Post Type Singular Name"
+msgid "Отзыв"
+msgstr ""
+
+#: functions.php:103 functions.php:104
+msgid "Отзывы"
+msgstr ""
+
+#: functions.php:105
+msgid "Архиви Отзывов"
+msgstr ""
+
+#: functions.php:106
+msgid "Отзывы атрибуты"
+msgstr ""
+
+#: functions.php:107 functions.php:163
+msgid "Родительсктй"
+msgstr ""
+
+#: functions.php:108 functions.php:164
+msgid "Все"
+msgstr ""
+
+#: functions.php:109 functions.php:110 functions.php:165 functions.php:166
+msgid "Добавить"
+msgstr ""
+
+#: functions.php:111 functions.php:167
+msgid "Новый"
+msgstr ""
+
+#: functions.php:112 functions.php:168
+msgid "Редактировать"
+msgstr ""
+
+#: functions.php:113 functions.php:169
+msgid "Обновить"
+msgstr ""
+
+#: functions.php:114 functions.php:170
+msgid "Посмотреть"
+msgstr ""
+
+#: functions.php:115 functions.php:171
+msgid "Посмотреть все"
+msgstr ""
+
+#: functions.php:116 functions.php:172
+msgid "Искать"
+msgstr ""
+
+#: functions.php:117 functions.php:118 functions.php:173 functions.php:174
+msgid "Не найдено"
+msgstr ""
+
+#: functions.php:119 functions.php:175
+msgid "Миниатюра"
+msgstr ""
+
+#: functions.php:120 functions.php:176
+msgid "Уставить миниатюру"
+msgstr ""
+
+#: functions.php:121 functions.php:177
+msgid "Удалить миниатюру"
+msgstr ""
+
+#: functions.php:122 functions.php:178
+msgid "Использовать как миниатюру"
+msgstr ""
+
+#: functions.php:123 functions.php:179
+msgid "Вставить в"
+msgstr ""
+
+#: functions.php:124 functions.php:180
+msgid "Uploaded to this item"
+msgstr ""
+
+#: functions.php:125 functions.php:181
+msgid "Items list"
+msgstr ""
+
+#: functions.php:126 functions.php:182
+msgid "Items list navigation"
+msgstr ""
+
+#: functions.php:127 functions.php:183
+msgid "Filter items list"
+msgstr ""
+
+#: functions.php:130
+msgid "Отзыв"
+msgstr ""
+
+#: functions.php:157
+msgctxt "Post Type General Name"
+msgid "Вопросы и ответы"
+msgstr ""
+
+#: functions.php:158
+msgctxt "Post Type Singular Name"
+msgid "Вопрос и ответ"
+msgstr ""
+
+#: functions.php:159 functions.php:160 functions.php:186
+msgid "Вопросы и ответы"
+msgstr ""
+
+#: functions.php:161
+msgid "Архиви Вопросы и ответы"
+msgstr ""
+
+#: functions.php:162
+msgid "Вопросы и ответы атрибуты"
+msgstr ""

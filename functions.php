@@ -4,8 +4,22 @@
  * @package WordPress
  * @subpackage shop_auto
  */
+// https://wp-kama.ru/id_9537/seo-meta-tegi-bez-plaginov.html
+// SEO без плагина
+require_once 'template_parts/seo/seo.php';
+/*  чистим мусор в хедере */
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'rsd_link');
 
 add_theme_support('title-tag');
+
+add_action( 'after_setup_theme', 'shopauto_theme_setup');
+function shopauto_theme_setup(){
+	load_theme_textdomain( 'shop_auto', get_template_directory() . '/languages' );
+}
+
+show_admin_bar(false);
 
 register_nav_menus(array(
 	'top' => 'Верхнее',
