@@ -31,8 +31,8 @@
 		</g>
 	</a>
 
-	<a href="<?php echo home_url(); ?>">
-		<g class="district" id="Zakarpattia" data-tooltip="<?php _e('Выкуп авто в Закарпатье', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Zakarpattia">
 			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="99.1321" y1="298.8758" x2="189.8422" y2="298.8758">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -46,8 +46,8 @@
 		</g>
 	</a>
 
-	<a href="<?php echo home_url(); ?>">
-		<g class="district" id="Volyn" data-tooltip="<?php _e('Выкуп авто Волынь', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Volyn">
 			<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="151.0757" y1="154.0046" x2="241.5798" y2="154.0046">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -172,8 +172,8 @@
 		</g>
 	</a>
 
-	<a href="<?php echo home_url(); ?>">
-		<g class="district" id="Luhansk" data-tooltip="<?php _e('Выкуп авто в Луганске', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Luhansk">
 			<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="658.0388" y1="274.4097" x2="741.7745" y2="274.4097">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -187,8 +187,8 @@
 		</g>
 	</a>
 
-	<a href="<?php echo home_url(); ?>">
-		<g class="district" id="Kirovohrad" data-tooltip="<?php _e('Выкуп авто в Кировоград', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Kirovohrad">
 			<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="369.6255" y1="298.0424" x2="519.8378" y2="298.0424">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -277,8 +277,8 @@
 		</g>
 	</a>
 
-	<a href="#">
-		<g class="district" id="Donetsk" data-tooltip="<?php _e('Выкуп авто Донецк', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Donetsk" >
 			<linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="611.2253" y1="321.6592" x2="702.5096" y2="321.6592">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -307,8 +307,8 @@
 		</g>
 	</a>
 
-	<a href="#">
-		<g class="district" id="Crimea" data-tooltip="<?php _e('Выкуп авто Крым', 'shop_auto')?>">
+	<a href="javascript:void('0')" style="cursor: default;">
+		<g class="district disable" id="Crimea" >
 			<linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="467.1998" y1="463.5847" x2="616.5389" y2="463.5847">
 				<stop offset="0" style="stop-color:#FFFFFF"/>
 				<stop offset="0.2393" style="stop-color:#868686"/>
@@ -322,7 +322,7 @@
 		</g>
 	</a>
 
-	<a href="/vykup-avto-chernigov/">
+	<a href="<?php echo home_url(); ?>/vykup-avto-chernigov/">
 		<g class="district" id="Chernihiv" data-tooltip="<?php _e('Выкуп авто в Чернигове', 'shop_auto')?>">
 			<linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="397.0109" y1="140.5429" x2="504.457" y2="140.5429">
 				<stop offset="0" style="stop-color:#FFFFFF"/>

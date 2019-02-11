@@ -5,24 +5,20 @@
  * @subpackage shop_auto
  */ 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	<div class="meta">
-		<p>Опубликовано: <?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></p>
-		<p>Автор:  <?php the_author_posts_link(); ?></p>
-		<p>Категории: <?php the_category(',') ?></p>
-		<?php the_tags('<p>Тэги: ', ',', '</p>'); ?>
-	</div>
-	<div class="row">
-		<?php if ( has_post_thumbnail() ) { ?>
-			<div class="col-sm-3">
-				<a href="<?php the_permalink(); ?>" class="thumbnail">
-					<?php the_post_thumbnail(); ?>
-				</a>
-			</div>
-		<?php } ?>
-		<div class="<?php if ( has_post_thumbnail() ) { ?>col-sm-9<?php } else { ?>col-sm-12<?php }  ?>">
-			<?php the_content(''); ?>
+<article id="post-<?php the_ID(); ?>" class="col-xs-4">
+	<div class="arcticle">
+		<div class="thumb">
+			<?php 
+			if( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			}
+			else {
+				echo '<img src="'.get_bloginfo("template_url").'/_images/no_Image.png" />';
+			}
+			?>
+			<a href="<?php the_permalink() ?>"><?php _e('Читать', 'shop_auto')?></a>
 		</div>
+		<div class="brand"><?php the_title(); ?></div>
+		<!-- <div class="text">1,6 МТ 2012 г.в.</div> -->
 	</div>
 </article>

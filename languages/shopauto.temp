@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 20:08+0200\n"
-"PO-Revision-Date: 2019-02-06 20:08+0200\n"
+"POT-Creation-Date: 2019-02-06 22:31+0200\n"
+"PO-Revision-Date: 2019-02-06 22:31+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -30,127 +30,127 @@ msgstr ""
 msgid "Вы можете использовать следующие <abbr>HTML</abbr> тэги: %s"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:106
 msgctxt "Post Type General Name"
 msgid "Отзывы"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:107
 msgctxt "Post Type Singular Name"
 msgid "Отзыв"
 msgstr ""
 
-#: functions.php:104 functions.php:105
+#: functions.php:108 functions.php:109
 msgid "Отзывы"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:110
 msgid "Архиви Отзывов"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:111
 msgid "Отзывы атрибуты"
 msgstr ""
 
-#: functions.php:108 functions.php:164
+#: functions.php:112 functions.php:168
 msgid "Родительсктй"
 msgstr ""
 
-#: functions.php:109 functions.php:165
+#: functions.php:113 functions.php:169
 msgid "Все"
 msgstr ""
 
-#: functions.php:110 functions.php:111 functions.php:166 functions.php:167
+#: functions.php:114 functions.php:115 functions.php:170 functions.php:171
 msgid "Добавить"
 msgstr ""
 
-#: functions.php:112 functions.php:168
+#: functions.php:116 functions.php:172
 msgid "Новый"
 msgstr ""
 
-#: functions.php:113 functions.php:169
+#: functions.php:117 functions.php:173
 msgid "Редактировать"
 msgstr ""
 
-#: functions.php:114 functions.php:170
+#: functions.php:118 functions.php:174
 msgid "Обновить"
 msgstr ""
 
-#: functions.php:115 functions.php:171
+#: functions.php:119 functions.php:175
 msgid "Посмотреть"
 msgstr ""
 
-#: functions.php:116 functions.php:172
+#: functions.php:120 functions.php:176
 msgid "Посмотреть все"
 msgstr ""
 
-#: functions.php:117 functions.php:173
+#: functions.php:121 functions.php:177
 msgid "Искать"
 msgstr ""
 
-#: functions.php:118 functions.php:119 functions.php:174 functions.php:175
+#: functions.php:122 functions.php:123 functions.php:178 functions.php:179
 msgid "Не найдено"
 msgstr ""
 
-#: functions.php:120 functions.php:176
+#: functions.php:124 functions.php:180
 msgid "Миниатюра"
 msgstr ""
 
-#: functions.php:121 functions.php:177
+#: functions.php:125 functions.php:181
 msgid "Уставить миниатюру"
 msgstr ""
 
-#: functions.php:122 functions.php:178
+#: functions.php:126 functions.php:182
 msgid "Удалить миниатюру"
 msgstr ""
 
-#: functions.php:123 functions.php:179
+#: functions.php:127 functions.php:183
 msgid "Использовать как миниатюру"
 msgstr ""
 
-#: functions.php:124 functions.php:180
+#: functions.php:128 functions.php:184
 msgid "Вставить в"
 msgstr ""
 
-#: functions.php:125 functions.php:181
+#: functions.php:129 functions.php:185
 msgid "Uploaded to this item"
 msgstr ""
 
-#: functions.php:126 functions.php:182
+#: functions.php:130 functions.php:186
 msgid "Items list"
 msgstr ""
 
-#: functions.php:127 functions.php:183
+#: functions.php:131 functions.php:187
 msgid "Items list navigation"
 msgstr ""
 
-#: functions.php:128 functions.php:184
+#: functions.php:132 functions.php:188
 msgid "Filter items list"
 msgstr ""
 
-#: functions.php:131
+#: functions.php:135
 msgid "Отзыв"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:162
 msgctxt "Post Type General Name"
 msgid "Вопросы и ответы"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:163
 msgctxt "Post Type Singular Name"
 msgid "Вопрос и ответ"
 msgstr ""
 
-#: functions.php:160 functions.php:161 functions.php:187
+#: functions.php:164 functions.php:165 functions.php:191
 msgid "Вопросы и ответы"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:166
 msgid "Архиви Вопросы и ответы"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:167
 msgid "Вопросы и ответы атрибуты"
 msgstr ""
 
@@ -351,43 +351,43 @@ msgid ""
 "\t\t\t\t\t\tв обмен на деньги"
 msgstr ""
 
-#: template_parts/section-infographics.php:11
+#: template_parts/section-infographics.php:10
 msgid "наши преимущества"
 msgstr ""
 
-#: template_parts/section-infographics.php:16
+#: template_parts/section-infographics.php:15
 msgid ""
 "Представители в каждой <br>\n"
 "\t\t\t\t\t\tобласти Украины"
 msgstr ""
 
-#: template_parts/section-infographics.php:21
+#: template_parts/section-infographics.php:20
 msgid ""
 "Решение вопросов<br>\n"
 "\t\t\t\t\t\tс финансовыми компаниями<br>\n"
 "\t\t\t\t\t\tдля залоговых автоы"
 msgstr ""
 
-#: template_parts/section-infographics.php:28
+#: template_parts/section-infographics.php:27
 msgid ""
 "Выезд нашего <br>\n"
 "\t\t\t\t\t\tэвакуатора <br> в любую точку"
 msgstr ""
 
-#: template_parts/section-infographics.php:34
+#: template_parts/section-infographics.php:33
 msgid ""
 "Возможность размещать<br>\n"
 "\t\t\t\t\t\tобъявления о продаже <br>\n"
 "\t\t\t\t\t\tавто в нашей базе"
 msgstr ""
 
-#: template_parts/section-infographics.php:41
+#: template_parts/section-infographics.php:40
 msgid ""
 "Возможность выкупа<br>\n"
 "\t\t\t\t\t\tлюбой мототехники"
 msgstr ""
 
-#: template_parts/section-infographics.php:46
+#: template_parts/section-infographics.php:45
 msgid ""
 "Скорость работы.<br>\n"
 "\t\t\t\t\t\t5 минут — на оценку,<br> \n"
@@ -395,7 +395,7 @@ msgid ""
 "\t\t\t\t\t\t15 минут — на выплату"
 msgstr ""
 
-#: template_parts/section-infographics.php:53
+#: template_parts/section-infographics.php:52
 msgid ""
 "Возможность автообмена <br>\n"
 "\t\t\t\t\t\t(Trade in)<br>\n"
@@ -403,7 +403,7 @@ msgid ""
 "\t\t\t\t\t\tс доплатой и без"
 msgstr ""
 
-#: template_parts/section-infographics.php:61
+#: template_parts/section-infographics.php:60
 msgid ""
 "Цена за выкуп <br>\n"
 "\t\t\t\t\t\tдо 95% от <br>\n"

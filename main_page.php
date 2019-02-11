@@ -8,7 +8,7 @@ get_header(); ?>
 
 
 <?php get_template_part('template_parts/section', 'promo')?>
-<section class="about">
+<section class="about" id="about_us">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -199,7 +199,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -260,7 +260,7 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section class="faq_section">
+	<section class="faq_section" id="faq">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

@@ -5,7 +5,7 @@
  * @subpackage shop_auto
  */
 ?>
-<footer class="footer">
+<footer class="footer" id="footer">
 	<div class="container">
 		<div class="row top-row">
 			<div class="col-md-3">
@@ -21,34 +21,19 @@
 			</div>
 			<div class="col-md-9">
 				<div class="nav-links">
-					<ul>
-						<li><a href="#">выкуп авто</a></li>
-						<li><a href="#">продать авто</a></li>
-						<li><a href="#">выкуп проблемных авто</a></li>
-						<li><a href="#">выкуп авто после дтп</a></li>
-						<li><a href="#">продать авто самому</a></li>
-						<li><a href="#">выкуп авто</a></li>
-						<li><a href="#">продать авто</a></li>
-						<li><a href="#">выкуп проблемных авто</a></li>
-						<li><a href="#">выкуп авто после дтп</a></li>
-						<li><a href="#">продать авто самому</a></li>
-						<li><a href="#">выкуп авто</a></li>
-						<li><a href="#">продать авто</a></li>
-						<li><a href="#">выкуп проблемных авто</a></li>
-						<li><a href="#">выкуп авто после дтп</a></li>
-						<li><a href="#">продать авто самому</a></li>
-						<li><a href="#">выкуп авто</a></li>
-						<li><a href="#">продать авто</a></li>
-						<li><a href="#">выкуп проблемных авто</a></li>
-						<li><a href="#">выкуп авто после дтп</a></li>
-						<li><a href="#">продать авто самому</a></li>
-						<li><a href="#">выкуп авто</a></li>
-						<li><a href="#">продать авто</a></li>
-						<li><a href="#">выкуп проблемных авто</a></li>
-						<li><a href="#">выкуп авто после дтп</a></li>
-						<li><a href="#">продать авто самому</a></li>
+					<?php
 
-					</ul>
+					$tags = get_tags();
+					$html = '<ul class="post_tags">';
+					foreach ($tags as $tag){
+						$tag_link = get_tag_link($tag->term_id);
+
+						$html .= "<li><a href='{$tag_link}'>{$tag->name}</a></li>";
+					}
+					$html .= '</ul>';
+					echo $html;
+
+					?>
 				</div>
 			</div>
 		</div>
@@ -121,6 +106,7 @@
 					th.find('.thx-message').fadeOut();
 					if (th.closest('.js-call-back-popup').length) {
 						$('.js-call-back-popup').fadeOut();
+						$('body').removeClass('no-scroll');
 					}
 					th.trigger("reset");
 					th.find('select').niceSelect('update')

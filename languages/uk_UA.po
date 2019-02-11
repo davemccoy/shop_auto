@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Shop Auto Theme\n"
-"POT-Creation-Date: 2019-02-06 22:35+0200\n"
-"PO-Revision-Date: 2019-02-06 22:36+0200\n"
+"POT-Creation-Date: 2019-02-07 00:14+0200\n"
+"PO-Revision-Date: 2019-02-07 00:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk_UA\n"
@@ -16,8 +16,8 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -31,127 +31,127 @@ msgstr ""
 msgid "Вы можете использовать следующие <abbr>HTML</abbr> тэги: %s"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:113
 msgctxt "Post Type General Name"
 msgid "Отзывы"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:114
 msgctxt "Post Type Singular Name"
 msgid "Отзыв"
 msgstr ""
 
-#: functions.php:108 functions.php:109
+#: functions.php:115 functions.php:116
 msgid "Отзывы"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:117
 msgid "Архиви Отзывов"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:118
 msgid "Отзывы атрибуты"
 msgstr ""
 
-#: functions.php:112 functions.php:168
+#: functions.php:119 functions.php:175
 msgid "Родительсктй"
 msgstr ""
 
-#: functions.php:113 functions.php:169
+#: functions.php:120 functions.php:176
 msgid "Все"
 msgstr ""
 
-#: functions.php:114 functions.php:115 functions.php:170 functions.php:171
+#: functions.php:121 functions.php:122 functions.php:177 functions.php:178
 msgid "Добавить"
 msgstr ""
 
-#: functions.php:116 functions.php:172
+#: functions.php:123 functions.php:179
 msgid "Новый"
 msgstr ""
 
-#: functions.php:117 functions.php:173
+#: functions.php:124 functions.php:180
 msgid "Редактировать"
 msgstr ""
 
-#: functions.php:118 functions.php:174
+#: functions.php:125 functions.php:181
 msgid "Обновить"
 msgstr ""
 
-#: functions.php:119 functions.php:175
+#: functions.php:126 functions.php:182
 msgid "Посмотреть"
 msgstr ""
 
-#: functions.php:120 functions.php:176
+#: functions.php:127 functions.php:183
 msgid "Посмотреть все"
 msgstr ""
 
-#: functions.php:121 functions.php:177
+#: functions.php:128 functions.php:184
 msgid "Искать"
 msgstr ""
 
-#: functions.php:122 functions.php:123 functions.php:178 functions.php:179
+#: functions.php:129 functions.php:130 functions.php:185 functions.php:186
 msgid "Не найдено"
 msgstr ""
 
-#: functions.php:124 functions.php:180
+#: functions.php:131 functions.php:187
 msgid "Миниатюра"
 msgstr ""
 
-#: functions.php:125 functions.php:181
+#: functions.php:132 functions.php:188
 msgid "Уставить миниатюру"
 msgstr ""
 
-#: functions.php:126 functions.php:182
+#: functions.php:133 functions.php:189
 msgid "Удалить миниатюру"
 msgstr ""
 
-#: functions.php:127 functions.php:183
+#: functions.php:134 functions.php:190
 msgid "Использовать как миниатюру"
 msgstr ""
 
-#: functions.php:128 functions.php:184
+#: functions.php:135 functions.php:191
 msgid "Вставить в"
 msgstr ""
 
-#: functions.php:129 functions.php:185
+#: functions.php:136 functions.php:192
 msgid "Uploaded to this item"
 msgstr ""
 
-#: functions.php:130 functions.php:186
+#: functions.php:137 functions.php:193
 msgid "Items list"
 msgstr ""
 
-#: functions.php:131 functions.php:187
+#: functions.php:138 functions.php:194
 msgid "Items list navigation"
 msgstr ""
 
-#: functions.php:132 functions.php:188
+#: functions.php:139 functions.php:195
 msgid "Filter items list"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:142
 msgid "Отзыв"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:169
 msgctxt "Post Type General Name"
 msgid "Вопросы и ответы"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:170
 msgctxt "Post Type Singular Name"
 msgid "Вопрос и ответ"
 msgstr ""
 
-#: functions.php:164 functions.php:165 functions.php:191
+#: functions.php:171 functions.php:172 functions.php:198
 msgid "Вопросы и ответы"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:173
 msgid "Архиви Вопросы и ответы"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:174
 msgid "Вопросы и ответы атрибуты"
 msgstr ""
 
@@ -261,95 +261,179 @@ msgstr ""
 
 #: main_page.php:116
 msgid ""
-"Здесь Вы можете выбрать конкретную марку авто<br>\n"
-"\t\t\t\t\tи про читать о его автовыкупе подробнее"
+"Здесь Вы можете выбрать конкретную марку авто<br> и прочитать о его "
+"автовыкупе подробнее"
 msgstr ""
 
-#: main_page.php:208
+#: main_page.php:207
 msgid "ОТЗЫВЫ"
 msgstr ""
 
-#: main_page.php:246
+#: main_page.php:245
 msgid "наши представители по всех регионах"
 msgstr ""
 
-#: main_page.php:249
+#: main_page.php:248
 msgid ""
-"Выберите Ваш регион и узнайте <br>\n"
-"\t\t\t\t\t\tо выкупе авто в этом регионе более подробно"
+"Выберите Ваш регион и узнайте <br>о выкупе авто в этом регионе более подробно"
 msgstr ""
 
-#: main_page.php:271
+#: main_page.php:269
 msgid "часто задаваемые вопросы"
 msgstr ""
 
-#: main_page.php:301 template_parts/section-infographics.php:7
+#: main_page.php:299 template_parts/section-infographics.php:7
 #: template_parts/section-promo.php:46
 msgid "заказать обратный звонок"
 msgstr ""
 
-#: main_page.php:306 template_parts/section-promo.php:52
+#: main_page.php:304 template_parts/section-promo.php:52
 msgid "Спасибо за заявку. Мы скоро свяжемся с Вами"
 msgstr ""
 
-#: main_page.php:310 template_parts/section-promo.php:55
+#: main_page.php:308 template_parts/section-promo.php:55
 msgid "Узнать стоимость своего авто в пару кликов "
 msgstr ""
 
-#: main_page.php:314 template_parts/section-promo.php:59
+#: main_page.php:312 template_parts/section-promo.php:59
 msgid "Год выпуска"
 msgstr ""
 
-#: main_page.php:339 template_parts/section-promo.php:84
+#: main_page.php:337 template_parts/section-promo.php:84
 msgid "Узнать"
-msgstr "Дізнатися"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:5
+msgid "Выкуп авто в Житомире"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:20
+msgid "Выкуп авто в Запорожье"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:35
+msgid "Выкуп авто в Закарпатье"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:50
+msgid "Выкуп авто Волынь"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:65
+msgid "Выкуп авто в Виннице"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:80
+msgid "Выкуп авто в Тернополе"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:86
+msgid "Выкуп авто в Суммах"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:101
+msgid "Выкуп авто в Ровном"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:116
+msgid "Выкуп авто в Полтаве"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:131
+msgid "Выкуп авто в Одессе"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:146
+msgid "Выкуп авто в Николаеве"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:161
+msgid "Выкуп авто во Львове"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:176
+msgid "Выкуп авто в Луганске"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:191
+msgid "Выкуп авто в Кировоград"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:206
+msgid "Выкуп авто в Киеве"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:221
+msgid "Выкуп авто в Хмельницкий"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:236
+msgid "Выкуп авто в Херсоне"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:251
+msgid "Выкуп авто в Харькове"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:266
+msgid "Выкуп авто Ивано-Франковск"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:281
+msgid "Выкуп авто Донецк"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:296
+msgid "Выкуп авто Днепр"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:311
+msgid "Выкуп авто Крым"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:326
+msgid "Выкуп авто в Чернигове"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:341
+msgid "Выкуп авто Черновцы"
+msgstr ""
+
+#: template_parts/interactive-map.svg.php:356
+msgid "Выкуп авто в Черкасы"
+msgstr ""
 
 #: template_parts/section-howit.php:6
 msgid "Как происходит автовыкуп"
 msgstr ""
 
 #: template_parts/section-howit.php:13
-msgid ""
-"Обработка Вашей заявки<br>\n"
-"\t\t\t\t\t\t\tи обсуждение по телефону"
+msgid "Обработка Вашей заявки<br> и обсуждение по телефону"
 msgstr ""
 
-#: template_parts/section-howit.php:17
-msgid ""
-"Вывод<br>\n"
-"\t\t\t\t\t\tвзаимовыгодной<br>\n"
-"\t\t\t\t\t\tцены "
+#: template_parts/section-howit.php:16
+msgid "Вывод<br> взаимовыгодной<br> цены "
 msgstr ""
 
-#: template_parts/section-howit.php:23
+#: template_parts/section-howit.php:20
 msgid ""
-"Осмотр авто<br>\n"
-"\t\t\t\t\t\tв удобном для Вас <br> \n"
-"\t\t\t\t\t\tместе. (10-20 мин)  Мы не ездим <br>\n"
-"\t\t\t\t\t\tпо СТО и не <br> \n"
-"\t\t\t\t\t\tтратим Ваше время"
+"Осмотр авто<br> в удобном для Вас <br> месте. (10-20 мин)  Мы не ездим "
+"<br>по СТО и не <br> тратим Ваше время"
 msgstr ""
 
-#: template_parts/section-howit.php:31
-msgid ""
-"Заключение<br>\n"
-"\t\t\t\t\t\tсделки"
+#: template_parts/section-howit.php:24
+msgid "Заключение<br> сделки"
 msgstr ""
 
-#: template_parts/section-howit.php:35
+#: template_parts/section-howit.php:27
 msgid ""
-"Оформление документов <br>\n"
-"\t\t\t\t\t\tпри согласии сторон <br>\n"
-"\t\t\t\t\t\t(договор купли-продажи, <br>\n"
-"\t\t\t\t\t\tпереоформление, доверенность) <br>\n"
+"Оформление документов <br>при согласии сторон <br>(договор купли-продажи, "
+"<br>переоформление, доверенность) <br>\n"
 "\t\t\t\t\t\tоплачиваем мы "
 msgstr ""
 
-#: template_parts/section-howit.php:42
-msgid ""
-"Расчёт <br>\n"
-"\t\t\t\t\t\tКлючи и документы <br>\n"
-"\t\t\t\t\t\tв обмен на деньги"
+#: template_parts/section-howit.php:31
+msgid "Расчёт <br>Ключи и документы <br>в обмен на деньги"
 msgstr ""
 
 #: template_parts/section-infographics.php:10
@@ -357,59 +441,38 @@ msgid "наши преимущества"
 msgstr ""
 
 #: template_parts/section-infographics.php:15
-msgid ""
-"Представители в каждой <br>\n"
-"\t\t\t\t\t\tобласти Украины"
+msgid "Представители в каждой <br>области Украины"
 msgstr ""
 
-#: template_parts/section-infographics.php:20
-msgid ""
-"Решение вопросов<br>\n"
-"\t\t\t\t\t\tс финансовыми компаниями<br>\n"
-"\t\t\t\t\t\tдля залоговых автоы"
+#: template_parts/section-infographics.php:19
+msgid "Решение вопросов<br> с финансовыми компаниями<br> для залоговых автоы"
 msgstr ""
 
-#: template_parts/section-infographics.php:27
-msgid ""
-"Выезд нашего <br>\n"
-"\t\t\t\t\t\tэвакуатора <br> в любую точку"
+#: template_parts/section-infographics.php:24
+msgid "Выезд нашего <br>эвакуатора <br>в любую точку"
 msgstr ""
 
-#: template_parts/section-infographics.php:33
-msgid ""
-"Возможность размещать<br>\n"
-"\t\t\t\t\t\tобъявления о продаже <br>\n"
-"\t\t\t\t\t\tавто в нашей базе"
+#: template_parts/section-infographics.php:29
+msgid "Возможность размещать<br> объявления о продаже <br>авто в нашей базе"
 msgstr ""
 
-#: template_parts/section-infographics.php:40
-msgid ""
-"Возможность выкупа<br>\n"
-"\t\t\t\t\t\tлюбой мототехники"
+#: template_parts/section-infographics.php:34
+msgid "Возможность выкупа<br> любой мототехники"
 msgstr ""
 
-#: template_parts/section-infographics.php:45
+#: template_parts/section-infographics.php:38
 msgid ""
-"Скорость работы.<br>\n"
-"\t\t\t\t\t\t5 минут — на оценку,<br> \n"
-"\t\t\t\t\t\t10 минут — на выкуп авто,<br>\n"
-"\t\t\t\t\t\t15 минут — на выплату"
+"Скорость работы.<br> 5 минут — на оценку,<br> 10 минут — на выкуп авто,<br> "
+"15 минут — на выплату"
 msgstr ""
 
-#: template_parts/section-infographics.php:52
+#: template_parts/section-infographics.php:42
 msgid ""
-"Возможность автообмена <br>\n"
-"\t\t\t\t\t\t(Trade in)<br>\n"
-"\t\t\t\t\t\tлюбого авто <br>\n"
-"\t\t\t\t\t\tс доплатой и без"
+"Возможность автообмена <br> (Trade in)<br> любого авто <br> с доплатой и без"
 msgstr ""
 
-#: template_parts/section-infographics.php:60
-msgid ""
-"Цена за выкуп <br>\n"
-"\t\t\t\t\t\tдо 95% от <br>\n"
-"\t\t\t\t\t\tрыночной стоимости <br>\n"
-"\t\t\t\t\t\tавтомобиля"
+#: template_parts/section-infographics.php:47
+msgid "Цена за выкуп <br> до 95% от <br> рыночной стоимости <br> автомобиля"
 msgstr ""
 
 #: template_parts/section-news_slider.php:16
