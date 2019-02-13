@@ -1,3 +1,16 @@
+<?php 
+// $wpdb2 = new wpdb('shopavto_db', 'BsDsJFhE', 'shopavto_db', 'shopavto.mysql.tools');
+
+// $query = "SELECT sale_posts.*
+// FROM sale_posts
+// WHERE 1=1 
+// AND sale_posts.post_type = 'car'
+// ORDER BY sale_posts.post_date DESC";
+// $cars = $wpdb2->get_results($query, OBJECT);
+// print_r($cars);
+// foreach($cars as $car) { 
+	
+// } ?>
 <?php
 /**
  * Шаблон шапки (header.php)
@@ -23,7 +36,14 @@
 
 <?php wp_head(); ?>
 </head>
+
+
 <body <?php body_class(); ?>>
+
+
+
+
+
 	<nav class="mobile-nav">
 		<?php $args = array( 
 			'theme_location' => 'top',

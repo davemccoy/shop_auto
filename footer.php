@@ -87,9 +87,6 @@
 	</div>
 </div>
 
-
-
-<div class="map-tooltip"></div>
 <?php wp_footer(); ?>
 <script>
 	jQuery(document).ready(function($) {

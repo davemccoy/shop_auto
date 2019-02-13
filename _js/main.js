@@ -189,64 +189,43 @@ jQuery(document).ready(function($) {
 			}
 		})
 	}
-
-});
-
-var tooltip = document.querySelector('.map-tooltip');
-// iterate throw all `path` tags
-[].forEach.call(document.querySelectorAll('.district:not(.disable)'), function(item) {
-	item.addEventListener('mouseenter', function() {
-		tooltip.innerHTML = item.getAttribute('data-tooltip');
-		tooltip.style.display = 'block';
+	$(window).load(function() {
+		equalheight('.same_height article');
 	});
 
-	item.addEventListener('mousemove', function(event) {
-		tooltip.style.top = event.clientY + 'px';
-		tooltip.style.left = event.clientX + 'px';
+
+	$(window).resize(function(){
+		equalheight('.same_height article');
 	});
-
-  // when mouse leave hide the tooltip
-  item.addEventListener('mouseleave', function(){
-  	tooltip.style.display = 'none';
-  });
 });
-
 equalheight = function(container){
 
-var currentTallest = 0,
-     currentRowStart = 0,
-     rowDivs = new Array(),
-     $el,
-     topPosition = 0;
- $(container).each(function() {
+	var currentTallest = 0,
+	currentRowStart = 0,
+	rowDivs = new Array(),
+	$el,
+	topPosition = 0;
+	$(container).each(function() {
 
-   $el = $(this);
-   $($el).height('auto')
-   topPostion = $el.position().top;
+		$el = $(this);
+		$($el).height('auto')
+		topPostion = $el.position().top;
 
-   if (currentRowStart != topPostion) {
-     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-       rowDivs[currentDiv].height(currentTallest);
-     }
-     rowDivs.length = 0; // empty the array
-     currentRowStart = topPostion;
-     currentTallest = $el.height();
-     rowDivs.push($el);
-   } else {
-     rowDivs.push($el);
-     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-  }
-   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-     rowDivs[currentDiv].height(currentTallest);
-   }
- });
+		if (currentRowStart != topPostion) {
+			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				rowDivs[currentDiv].height(currentTallest);
+			}
+			rowDivs.length = 0; // empty the array
+			currentRowStart = topPostion;
+			currentTallest = $el.height();
+			rowDivs.push($el);
+		} else {
+			rowDivs.push($el);
+			currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+		}
+		for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			rowDivs[currentDiv].height(currentTallest);
+		}
+	});
 }
 
-$(window).load(function() {
-  equalheight('.same_height article');
-});
-
-
-$(window).resize(function(){
-  equalheight('.same_height article');
-});
