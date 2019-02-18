@@ -1457,7 +1457,7 @@ section.count {
 		text-align: center;
 		img {
 			display: inline-block;
-			height: 255px;
+			height: 205px;
 			width: 100%;
 			object-fit: cover;
 		}
@@ -1465,7 +1465,8 @@ section.count {
 			font-size: 16px;
 			font-weight: bold;
 			text-align: left;
-		}
+			text-transform: capitalize;
+		} 
 		.text {
 			font-weight: bold;
 			font-size: 16px;
