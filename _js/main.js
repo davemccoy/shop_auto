@@ -231,7 +231,6 @@ jQuery(document).ready(function($) {
 	}
 });
 
-
 jQuery(".js-testimonails-content").each(function(){
 	var review_full = jQuery(this).html();
 	var review = review_full;
@@ -247,3 +246,4 @@ jQuery(".js-testimonails-content").each(function(){
 jQuery(".js-open-full .small-btn").click(function(){
 	jQuery(this).closest('.js-testimonails-content').html( jQuery(this).closest('.js-testimonails-content').find(".full_text").html() );
 });
+
