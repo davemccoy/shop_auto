@@ -1,16 +1,3 @@
-<?php 
-// $wpdb2 = new wpdb('shopavto_db', 'BsDsJFhE', 'shopavto_db', 'shopavto.mysql.tools');
-
-// $query = "SELECT sale_posts.*
-// FROM sale_posts
-// WHERE 1=1 
-// AND sale_posts.post_type = 'car'
-// ORDER BY sale_posts.post_date DESC";
-// $cars = $wpdb2->get_results($query, OBJECT);
-// print_r($cars);
-// foreach($cars as $car) { 
-	
-// } ?>
 <?php
 /**
  * Шаблон шапки (header.php)
@@ -56,7 +43,7 @@
 		?>
 	</nav>
 	<div class="mm-page">
-		<header class="header js-check-stiky">
+		<header class="header js-check-stiky <?php if (get_field('baners')) { echo 'white'; }?> ">
 			<div class="top_header_row">
 				<div class="container no-before no-after">
 					<div class="row">
@@ -88,10 +75,20 @@
 				<div class="bottom_header_row">
 					<div class="logo">
 						<?php if( is_front_page() ){ ?>
-							<img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt="">
+							<?php if (get_field('baners')) { ?>
+								<img src="<?php echo get_template_directory_uri();?>/_images/logo-white.png" alt="">
+							<?php } else { ?>
+								<img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt="">
+							<?php } ?>
 						<?php }
 						else { ?>
-							<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt=""></a>
+							<a href="<?php echo home_url(); ?>">
+								<?php if (get_field('baners')) { ?>
+									<img src="<?php echo get_template_directory_uri();?>/_images/logo-white.png" alt="">
+								<?php } else { ?>
+									<img src="<?php echo get_template_directory_uri();?>/_images/logo.png" alt="">
+								<?php } ?>
+							</a>
 						<?php }
 						?>
 					</div>

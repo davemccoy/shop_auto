@@ -13,24 +13,29 @@
 
 
 				<div class="owl-carousel slider3item cars-slider">
-					<?php 
-					$wpdb2 = new wpdb('shopavto_db', 'BsDsJFhE', 'shopavto_db', 'shopavto.mysql.tools');
 
-					$query = "SELECT sale_posts.*
-					FROM sale_posts
-					WHERE 1=1 
-					AND sale_posts.post_type = 'car'
-					ORDER BY sale_posts.post_date DESC";
-					$cars = $wpdb2->get_results($query, OBJECT);
-					// print_r($cars);
-					foreach($cars as $car) { ?>
-						<div class="slide">
-						<img src="<?php echo get_template_directory_uri();?>/_images/car.jpg" alt="">
-						<div class="brand"><?php echo $car->post_name?></div>
-						<div class="text">1,6 МТ 2012 г.в.</div>
-					</div>
-					<?php } ?>
-					
+
+					<?php 
+					$response = wp_remote_get( add_query_arg( array(
+						'per_page' => 10
+					), 'https://shopavto.com/sale/wp-json/wp/v2/car' ) );
+
+					if( !is_wp_error( $response ) && $response['response']['code'] == 200 ) {
+						$remote_posts = json_decode( $response['body'] ); 
+						foreach( $remote_posts as $remote_post ) { ?>
+
+							<?php $name =$remote_post->slug;
+								$pretty_name = str_replace('-', ' ', $name)
+							?>
+							<div class="slide">
+								<img src="https://shopavto.com/sale/wp-content/uploads/thememakers/cardealer/<?php echo $remote_post->author ?>/<?php echo $remote_post->id ?>/thumb/<?php echo $remote_post->metadata->car_cover_image[0] ?>" alt="">
+								<div class="brand"><?php echo $pretty_name ?></div>
+								<div class="text">Обьем <?php echo $remote_post->metadata->car_engine_size[0] ?> - <?php echo $remote_post->metadata->car_year[0] ?> г.в.</div>
+							</div>
+						<?php }
+					}
+					?>
+
 				</div>
 			</div>
 		</div>

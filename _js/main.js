@@ -1,18 +1,5 @@
 jQuery(document).ready(function($) {
-	$('a[href^="#"]').bind('click.smoothscroll', function (e) {
-		e.preventDefault();
-		
-		var target = this.hash,
-		$target = $(target),
-		$offset =  $target.offset().top + 75;
-		console.log($offset);
-		$('.stiky-menu').slideUp();
-		$('html, body').stop().animate({
-			'scrollTop': $offset
-		}, 1000, 'swing', function () {
-			window.location.hash = target;
-		});
-	});
+	
 	if ($(".mobile-nav").length) {
 		$(".mobile-nav").mmenu({
 			"extensions": [
@@ -37,6 +24,21 @@ jQuery(document).ready(function($) {
 			API.close();
 		})
 	}
+
+	$('a[href^="#"]').bind('click.smoothscroll', function (e) {
+		e.preventDefault();
+		
+		var target = this.hash,
+		$target = $(target),
+		$offset =  $target.offset().top + 75;
+		$('.stiky-menu').slideUp();
+		API.close();
+		$('html, body').stop().animate({
+			'scrollTop': $offset
+		}, 1000, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
 
 	$('.js-show-menu').click(function() {
 		$(this).toggleClass('open').next().slideToggle();
@@ -197,35 +199,51 @@ jQuery(document).ready(function($) {
 	$(window).resize(function(){
 		equalheight('.same_height article');
 	});
-});
-equalheight = function(container){
+	equalheight = function(container){
 
-	var currentTallest = 0,
-	currentRowStart = 0,
-	rowDivs = new Array(),
-	$el,
-	topPosition = 0;
-	$(container).each(function() {
+		var currentTallest = 0,
+		currentRowStart = 0,
+		rowDivs = new Array(),
+		$el,
+		topPosition = 0;
+		$(container).each(function() {
 
-		$el = $(this);
-		$($el).height('auto')
-		topPostion = $el.position().top;
+			$el = $(this);
+			$($el).height('auto')
+			topPostion = $el.position().top;
 
-		if (currentRowStart != topPostion) {
+			if (currentRowStart != topPostion) {
+				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+					rowDivs[currentDiv].height(currentTallest);
+				}
+				rowDivs.length = 0; // empty the array
+				currentRowStart = topPostion;
+				currentTallest = $el.height();
+				rowDivs.push($el);
+			} else {
+				rowDivs.push($el);
+				currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+			}
 			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
 				rowDivs[currentDiv].height(currentTallest);
 			}
-			rowDivs.length = 0; // empty the array
-			currentRowStart = topPostion;
-			currentTallest = $el.height();
-			rowDivs.push($el);
-		} else {
-			rowDivs.push($el);
-			currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-		}
-		for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-			rowDivs[currentDiv].height(currentTallest);
-		}
-	});
-}
+		});
+	}
+});
 
+
+jQuery(".js-testimonails-content").each(function(){
+	var review_full = jQuery(this).html();
+	var review = review_full;
+
+	if( review.length > 300 )
+	{
+		review = review.substring(0, 300) + '...';
+		jQuery(this).html( review + '<div class="js-open-full"><span class="small-btn">читать полностью &rarr;</span></div>' );
+	}
+	jQuery(this).append('<div class="full_text" style="display: none;">' + review_full + '</div>');
+});
+
+jQuery(".js-open-full .small-btn").click(function(){
+	jQuery(this).closest('.js-testimonails-content').html( jQuery(this).closest('.js-testimonails-content').find(".full_text").html() );
+});

@@ -19,7 +19,7 @@ function shopauto_theme_setup(){
 	load_theme_textdomain( 'shop_auto', get_template_directory() . '/languages' );
 }
 
-show_admin_bar(false);
+// show_admin_bar(false);
 
 register_nav_menus(array(
 	'top' => 'Верхнее',
@@ -49,7 +49,7 @@ if (!function_exists('pagination')) {
 			'after_page_number' => ''
 		));
 		if( is_array( $links ) ) {
-			echo '<ul class="pagination">';
+			echo '<ul class="pagination col-xs-12">';
 			foreach ( $links as $link ) {
 				if ( strpos( $link, 'current' ) !== false ) echo "<li class='active'>$link</li>";
 				else echo "<li>$link</li>"; 
@@ -63,8 +63,6 @@ add_action('wp_footer', 'add_scripts');
 if (!function_exists('add_scripts')) {
 	function add_scripts() {
 		if(is_admin()) return false;
-		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', get_template_directory_uri().'/_libs/jquery/jquery-1.11.2.min.js','','',true);
 		wp_enqueue_script('owl-carousel', get_template_directory_uri().'/_libs/owl/owl.carousel.min.js','','',true);
 		wp_enqueue_script('mmenu-js', get_template_directory_uri().'/_libs/mmenu/jquery.mmenu.all.js');
 		wp_enqueue_script('niceselect-js', get_template_directory_uri().'/_libs/niceselect/jquery.nice-select.min.js');
@@ -76,7 +74,8 @@ add_action('wp_print_styles', 'add_styles');
 if (!function_exists('add_styles')) {
 	function add_styles() {
 		if(is_admin()) return false;
-
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery', get_template_directory_uri().'/_libs/jquery/jquery-1.11.2.min.js','','',true);
 		wp_enqueue_script('modernizr', get_template_directory_uri().'/_libs/modernizr/modernizr.js','','',true);
 		wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri().'/_libs/bootstrap/css/bootstrap-grid.min.css' );
 		wp_enqueue_style( 'owl-carousel-css', get_template_directory_uri().'/_libs/owl/assets/owl.carousel.min.css' );
@@ -215,3 +214,11 @@ function faq_post_type() {
 
 }
 add_action( 'init', 'faq_post_type', 0 );	
+
+// Add Shortcode
+function call_back_button_shortcode() {
+
+	return '<div class="call_back" style="display: inline-block; width: 270px;"><a href="javascript:void(\'0\')">заказать обратный звонок</a></div>';
+
+}
+add_shortcode( 'call_back_button', 'call_back_button_shortcode' );

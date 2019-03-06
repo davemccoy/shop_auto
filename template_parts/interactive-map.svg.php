@@ -361,7 +361,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 </g>
 </a>
 
-
+<a href="#">
 <g id="Zakarpattia" class="district">
 	
 	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0.25" y1="213.1" x2="90.95" y2="213.1" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -457,6 +457,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 	+FjW/kiOcM5IEe9n/J/xlLE7Qq1N7W8BBgAJVcIVY1UFXQAAAABJRU5ErkJggg==" transform="matrix(1 0 0 1 11.3 200.0667)">
 </image>
 </g>
+</a>
 
 <g id="Volyn" class="district">
 	
