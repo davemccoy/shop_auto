@@ -26,11 +26,6 @@
 
 
 <body <?php body_class(); ?>>
-
-
-
-
-
 	<nav class="mobile-nav">
 		<?php $args = array( 
 			'theme_location' => 'top',

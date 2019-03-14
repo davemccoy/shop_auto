@@ -3,21 +3,26 @@ $images = get_field('baners');
 if (get_field('first_slide_text')) {
     $slide1 = get_field('first_slide_text');
 } else {
-    $slide1 = _e('Мы готовы приехать и <span>купить</span> Ваш автомобиль ', 'shop_auto');
+    $slide1 = __('Мы готовы приехать и <span>купить</span> Ваш автомобиль ', 'shop_auto');
 }
 
 if (get_field('second_slide_text')) {
     $slide2 = get_field('second_slide_text');
 } else {
-    $slide2 = _e('Автовыкуп - Дорого, Быстро. Выкуп сразу в день осмотра', 'shop_auto');
+    $slide2 = __('Автовыкуп - Дорого, Быстро. Выкуп сразу в день осмотра', 'shop_auto');
 }
 
 if (get_field('third_slide_text')) {
-    $slide2 = get_field('third_slide_text');
+    $slide3 = get_field('third_slide_text');
 } else {
-    $slide2 = _e('Выкуп авто до 95% от рынка. Оценка по телефону.', 'shop_auto');
+    $slide3 = __('Выкуп авто до 95% от рынка. Оценка по телефону.', 'shop_auto');
 }
 if($images) { ?>
+    <div style="display: none">
+        <?php foreach( $images as $image ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="">
+        <?php endforeach; ?>
+    </div>
     <script>
         jQuery(document).ready(function ($) {
             $(function () {
@@ -40,13 +45,15 @@ if($images) { ?>
                     item_image.css(
                         'background-image',
                         backgrounds[current = ++current % backgrounds.length]);
-                    item_texts.fadeOut().text(texts[text_current = ++text_current % texts.length]).fadeIn();
-                    setTimeout(nextBackground, 5000);
-                }
+                    setTimeout(function() {
+                       item_texts.text(texts[text_current = ++text_current % texts.length]);
+                    }, 300)
+                    setTimeout(nextBackground, 4700);
+                }                
 
-                setTimeout(nextBackground, 5000);
+                setTimeout(nextBackground, 4700); 
                 item_image.css('background-image', backgrounds[0]);
-                item_texts.fadeOut().text(texts[0]).fadeIn();
+                item_texts.text(texts[0]);
             });
         });
     </script>
@@ -91,7 +98,7 @@ if($images) { ?>
                                 $q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = 0) WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
                                 echo '<option selected="selected" value="0">Марка авто</option>';
                                 foreach ($q as $row) {
-                                    echo '<option value="' . $row->term_id . '">' . $row->name . '</option>';
+                                    echo '<option data-brand="' . $row->name . '" value="' . $row->term_id . '">' . $row->name . '</option>';
                                 } ?>
 
                             </select>
@@ -202,7 +209,7 @@ if($images) { ?>
                                 $q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = 0) WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
                                 echo '<option selected="selected" value="0">Марка авто</option>';
                                 foreach ($q as $row) {
-                                    echo '<option value="' . $row->term_id . '">' . $row->name . '</option>';
+                                    echo '<option data-brand="' . $row->name . '" value="' . $row->term_id . '">' . $row->name . '</option>';
                                 } ?>
 
                             </select>

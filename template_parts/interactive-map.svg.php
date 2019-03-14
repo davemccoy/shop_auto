@@ -361,7 +361,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 </g>
 </a>
 
-<a href="#">
+<a href="<?php echo home_url(); ?>/vykup-avto-uzhgorod/">
 <g id="Zakarpattia" class="district">
 	
 	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0.25" y1="213.1" x2="90.95" y2="213.1" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -458,7 +458,8 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 </image>
 </g>
 </a>
-
+	
+<a href="<?php echo home_url(); ?>/vykup-avto-rivne/">
 <g id="Volyn" class="district">
 	
 	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="52.15" y1="358" x2="142.65" y2="358" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -584,7 +585,8 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 	hFQAAAAASUVORK5CYII=" transform="matrix(0.7514 0 0 0.7514 95.25 68.6958)">
 </image>
 </g>
-
+</a>
+	
 <a href="<?php echo home_url(); ?>/vykup-avto-vinnitsa/">
 <g id="Vinnytsia" class="district">
 	
@@ -1758,6 +1760,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 </g>
 </a>
 
+<a href="<?php echo home_url(); ?>/vykup-avto-severodonetsk/">
 <g id="Luhansk" class="district">
 	
 	<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="559.15" y1="237.6" x2="642.85" y2="237.6" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -1912,7 +1915,9 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 	WTmwttoYFQAAAABJRU5ErkJggg==" transform="matrix(0.3829 0 0 0.3829 588.0751 202.5009)">
 </image>
 </g>
+</a>
 
+<a href="<?php echo home_url(); ?>/vykup-avto-kropyvnytskyi/">
 <g id="Kirovohrad" class="district">
 	
 	<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="270.75" y1="213.95" x2="420.95" y2="213.95" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -2107,6 +2112,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 	Tr+8Rt19NkQu7yv/EmAA3reZfVJLJ80AAAAASUVORK5CYII=" transform="matrix(0.8146 0 0 0.8146 326.6507 204.9896)">
 </image>
 </g>
+</a>
 
 <a href="<?php echo home_url(); ?>/vykup-avto-kiev/">
 <g id="Kiev" class="district">
@@ -2923,6 +2929,7 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 </g>
 </a>
 
+<a href="<?php echo home_url(); ?>/vykup-avto-kramatorsk/">
 <g id="Donetsk" class="district">
 	
 	<linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="512.35" y1="190.35" x2="603.65" y2="190.35" gradientTransform="matrix(1 0 0 -1 0 432)">
@@ -3080,7 +3087,8 @@ viewBox="0 0 642.9 430.6" enable-background="new 0 0 642.9 430.6" xml:space="pre
 	4DPWahlXPIHZT82wnWdfyWcfp+38TnYHE5vXJds/BRgA8Cjo1Jae7o8AAAAASUVORK5CYII=" transform="matrix(1 0 0 1 528.2 225.2)">
 </image>
 </g>
-
+</a>
+	
 <a href="<?php echo home_url(); ?>/vykup-avto-dnepr/">
 <g id="Dnipropetrovsk" class="district">
 	

@@ -98,9 +98,9 @@ function get_carproducers_callback(){
 	}
 	$wpdb_sale = new wpdb( "shopavto_db", "BsDsJFhE", "shopavto_db", "shopavto.mysql.tools" );
 	$q = $wpdb_sale->get_results("SELECT t.term_id, t.name, t.slug FROM sale_terms AS t INNER JOIN sale_term_taxonomy AS tt ON (t.term_id = tt.term_id AND tt.parent = ".$carproducer_id.") WHERE tt.taxonomy IN ('carproducer') ORDER BY t.name ASC");
-	echo '<option selected="selected" value="0">Модель авто</option>';
+	echo '<option data-model="0" selected="selected" value="0">Модель авто</option>';
 	foreach($q as $row) {
-		echo '<option value="'.$row->term_id.'">'.$row->name.'</option>';
+		echo '<option data-model="'.$row->name.'" value="'.$row->term_id.'">'.$row->name.'</option>';
 	}
 	exit();
 }

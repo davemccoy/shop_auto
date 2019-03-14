@@ -68,7 +68,7 @@
 <div class="popup js-call-back-popup">
 	<div class="overlay"></div>
 	<div class="popup-content">
-		<form class="price_request">
+		<form class="price_request call_back">
 			<div class="thx-message" style="display: none">
 				Спасибо за заявку. Мы скоро свяжемся с Вами
 			</div>
@@ -90,17 +90,19 @@
 <?php wp_footer(); ?>
 <script>
 	jQuery(document).ready(function($) {
-		$("form").submit(function() {
-			var th = $(this);
+		$("form.price_request").submit(function() {
+			var th = $(this),
+			brand = th.find('[name="brand"]').find(':selected').data("brand"),
+			model = th.find('[name="model"]').find(':selected').data("model");
 			$.ajax({
 				type: "POST",
 				url: "<?php echo get_template_directory_uri();?>/mail.php",
-				data: th.serialize()
+				data: th.serialize() + '&brand_name=' + brand + '&model_name=' + model
 			}).done(function() {
 				th.find('.thx-message').fadeIn();
 
 				setTimeout(function() {
-					th.find('.thx-message').fadeOut();
+					th.find('.thx-message').fadeOut(); 
 					if (th.closest('.js-call-back-popup').length) {
 						$('.js-call-back-popup').fadeOut();
 						$('body').removeClass('no-scroll');
